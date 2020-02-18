@@ -15,8 +15,7 @@ following steps:
 
 #. :ref:`Install <cartridge-install>` Tarantool Cartridge and other
    components of the development environment.
-#. Choose a :ref:`template <cartridge-templates>` for the application and
-   create a project.
+#. :ref:`Create a project <cartridge-project>`.
 #. Develop the application.
    In case it is a cluster-aware application, implement its logic in
    a custom (user-defined) :ref:`cluster role <cartridge-roles>`
@@ -35,7 +34,7 @@ The following sections provide details for each of these steps.
 Installing Tarantool Cartridge
 --------------------------------------------------------------------------------
 
-#. Install ``catridge-cli``, a command-line tool for developing, deploying, and
+#. Install ``cartridge-cli``, a command-line tool for developing, deploying, and
    managing Tarantool applications:
 
    .. code-block:: console
@@ -58,50 +57,28 @@ Installing Tarantool Cartridge
 #. Install the ``unzip`` utility.
 
 .. _cartridge-templates:
+.. _cartridge-project:
 
 --------------------------------------------------------------------------------
-Application templates
+Creating a project
 --------------------------------------------------------------------------------
 
-Tarantool Cartridge provides you with two templates that help
-instantly set up the application development environment:
-
-* ``plain``, for developing an application that runs on a single or multiple
-  independent Tarantool instances (e.g. acting as a proxy to
-  third-party databases) -- that's what you could do before,
-  :ref:`without Tarantool Cartridge <app_server-creating_app>`,
-  but now it's more convenient.
-* ``cartridge``, for developing a cluster-aware application -- this is an
-  exclusive feature of Tarantool Cartridge.
-
-To create a project based on either template, in any directory say:
+To set up your development environment, create a project using the
+Tarantool Cartridge project template. In any directory, say:
 
 .. code-block:: console
 
-    # plain application
-    $ plain create --name <app_name> /path/to/
-
-    # - OR -
-
-    # cluster application
-    $ cartridge create --name <app_name> /path/to/
+   $ cartridge create --name <app_name> /path/to/
 
 This will automatically set up a Git repository in a new ``/path/to/<app_name>/``
 directory, tag it with :ref:`version <cartridge-versioning>` ``0.1.0``,
-and put the necessary files into it (read about default files for each template
-below).
+and put the necessary files into it.
 
 In this Git repository, you can develop the application (by simply editing
 the default files provided by the template), plug the necessary
 modules, and then easily pack everything to deploy on your server(s).
 
-.. _cartridge-template-plain:
-
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-Plain template
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-The plain template creates the ``<app_name>/`` directory with the following
+The project template creates the ``<app_name>/`` directory with the following
 contents:
 
 * ``<app_name>-scm-1.rockspec`` file where you can specify the application
@@ -110,24 +87,13 @@ contents:
 * ``init.lua`` file which is the entry point for your application.
 * ``.git`` file necessary for a Git repository.
 * ``.gitignore`` file to ignore the unnecessary files.
-
-.. _cartridge-template-cluster:
-
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-Cluster template
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-In addition to the files listed in the plain template section, the cluster
-template contains the following:
-
 * ``env.lua`` file that sets common rock paths so that the application can be
   started from any directory.
 * ``custom-role.lua`` file that is a placeholder for a custom (user-defined)
   :ref:`cluster role <cartridge-roles>`.
 
-The entry point file (``init.lua``) of the cluster template differs from the
-plain one. Among other things, it loads the ``cartridge`` module and calls its
-initialization function:
+The entry point file (``init.lua``), among other things, loads the ``cartridge``
+module and calls its initialization function:
 
 .. code-block:: lua
 
@@ -141,10 +107,10 @@ initialization function:
      cluster_cookie = 'super-cluster-cookie',
      ...
    }, {
-   -- box options example 
+   -- box options example
      memtx_memory = 1000000000,
      ... })
-    ... 
+    ...
 
 The ``cartridge.cfg()`` call renders the instance operable via the administrative
 console but does not call ``box.cfg()`` to configure instances.
@@ -170,10 +136,12 @@ Notice that you can specify a cookie for the cluster (``cluster_cookie`` paramet
 if you need to run several clusters in the same network. The cookie can be any
 string value.
 
-Before developing a cluster-aware application, familiarize yourself with
-the notion of :ref:`cluster roles <cartridge-roles>`
-and make sure to define a custom role to initialize the database for the cluster
-application.
+Now you can develop an application that will run on a single or multiple
+independent Tarantool instances (e.g. acting as a proxy to third-party databases)
+-- or will run in a cluster.
+
+If you plan to develop a cluster-aware application, first familiarize yourself
+with the notion of :ref:`cluster roles <cartridge-roles>`.
 
 .. _cartridge-roles:
 
@@ -181,14 +149,18 @@ application.
 Cluster roles
 --------------------------------------------------------------------------------
 
-A Tarantool Cartridge cluster segregates instance functionality in a role-based
-way. **Cluster roles** are Lua modules that implement some instance-specific
-functions and/or logic.
+**Cluster roles** are Lua modules that implement some specific
+functions and/or logic. In other words, a Tarantool Cartridge cluster
+segregates instance functionality in a role-based way.
 
-Since all instances running cluster applications use the same source code and
-are aware of all the defined roles (and plugged modules), multiple different
-roles can be dynamically enabled and disabled on any number of instances
-without restarts even during cluster operation.
+Since all instances running cluster applications use the same source code and are
+aware of all the defined roles (and plugged modules), you can dynamically enable
+and disable multiple different roles without restarts, even during cluster operation.
+
+Note that every instance in a replica set performs the same roles and you cannot
+enable/disable roles individually on some instances. In other words, configuration
+of enabled roles is set up *per replica set*. See a step-by-step configuration example
+in :ref:`this guide <cartridge-deployment>`.
 
 .. _cartridge-built-in-roles:
 
