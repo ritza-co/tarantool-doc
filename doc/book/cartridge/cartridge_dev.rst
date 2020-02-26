@@ -181,23 +181,10 @@ automatic sharding:
      For more information on sharding, see the
      :ref:`vshard module documentation <vshard>`.
 
-With the built-in and custom roles, Tarantool Cartridge allows you to develop
-applications with separated compute and transaction handling. Later, the
-relevant workload-specific roles can be enabled on different instances running
+With the built-in and :ref:`custom roles <cartridge-custom-roles>`, you can
+develop applications with separated compute and transaction handling -- and
+enable relevant workload-specific roles on different instances running
 on physical servers with workload-dedicated hardware.
-
-Neither ``vshard-router`` nor ``vshard-storage`` manage spaces, indexes, or
-formats. To start developing an application, edit the ``custom-role.lua``
-placeholder file: add a ``box.schema.space.create()`` call to your first
-cluster role.
-
-Additionally, you can implement several such roles to:
-
-* define stored procedures;
-* implement functionality on top of ``vshard``;
-* go without ``vshard`` at all;
-* implement one or multiple supplementary services such as
-  e-mail notifier, replicator, etc.
 
 .. _cartridge-custom-roles:
 
@@ -205,33 +192,24 @@ Additionally, you can implement several such roles to:
 Custom roles
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-To implement a *custom* cluster role, do the following:
+You can implement custom roles for any purposes, for example:
 
-#. Register the new role in the cluster by modifying the ``cartridge.cfg()``
-   call in the ``init.lua`` entry point file:
+* define stored procedures;
+* implement extra features on top of ``vshard``;
+* go without ``vshard`` at all;
+* implement one or multiple supplementary services such as
+  e-mail notifier, replicator, etc.
 
-   .. code-block:: lua
-      :emphasize-lines: 7
+To implement a custom cluster role, do the following:
 
-      ...
-      local cartridge = require('cartridge')
-      ...
-      cartridge.cfg({
-        workdir = ...,
-        advertise_uri = ...,
-        roles = {'custom-role'},
-      })
-      ...
-
-   where ``custom-role`` is the name of the Lua module to be loaded.
-
-#. Implement the role in a file with the appropriate name (``custom-role.lua``).
-   For example:
+#. Take the ``app/roles/custom.lua`` file in your project as a sample.
+   Rename this file as you wish, e.g. ``app/roles/custom-role.lua``,
+   and implement the role's logic. For example:
 
    .. code-block:: lua
 
+      -- Implement a custom role in app/roles/custom-role.lua
       #!/usr/bin/env tarantool
-      -- Custom role implementation
       local role_name = 'custom-role'
 
       local function init()
@@ -248,23 +226,42 @@ To implement a *custom* cluster role, do the following:
           stop = stop,
       }
 
-   Where the ``role_name`` may differ from the module name passed to the
+   Here the ``role_name`` value may differ from the module name passed to the
    ``cartridge.cfg()`` function. If the ``role_name`` variable is not specified,
-   the module name is the default value.
+   the module (= LUA FILE NAME???) name is the default value.
 
    .. NOTE::
 
       Role names must be unique as it is impossible to register multiple
       roles with the same name.
 
-The role module does not have required functions but the cluster may execute the
-following ones during the role's life cycle:
+#. Register the new role in the cluster by modifying the ``cartridge.cfg()``
+   call in the ``init.lua`` entry point file:
+
+   .. code-block:: lua
+      :emphasize-lines: 8
+
+      -- Register a custom role in init.lua
+      ...
+      local cartridge = require('cartridge')
+      ...
+      cartridge.cfg({
+        workdir = ...,
+        advertise_uri = ...,
+        roles = {'custom-role'},
+      })
+      ...
+
+   where ``custom-role`` is the name of the Lua module to be loaded.
+
+The role module does not have required functions, but the cluster may execute the
+following ones during the :ref:`role's life cycle <cartridge-role-lifecycle>`:
 
 * ``init()`` is the role's *initialization* function.
 
-  Inside the function's body you can call any ``box`` functions:
-  create spaces, indexes, grant permissions, etc. Here is what the
-  initialization function may look like:
+  Inside the function's body you can call any :ref:`box <box-module>` functions:
+  create spaces, indexes, grant permissions, etc.
+  Here is what the initialization function may look like:
 
   .. code-block:: lua
      :emphasize-lines: 3
@@ -289,21 +286,26 @@ following ones during the role's life cycle:
 
   .. NOTE::
 
-     The function's body is wrapped in a conditional statement that
-     lets you call ``box`` functions on masters only. This protects
-     against replication collisions as data propagates to replicas
-     automatically.
+     * Neither ``vshard-router`` nor ``vshard-storage`` manage spaces, indexes,
+       or formats. You should do it within a *custom* role: add
+       a ``box.schema.space.create()`` call to your first cluster role, as shown
+       in the example above.
+
+     * The function's body is wrapped in a conditional statement that
+       lets you call ``box`` functions on masters only. This protects
+       against replication collisions as data propagates to replicas
+       automatically.
 
 * ``stop()`` is the role's *termination* function. Implement it if
   initialization starts a fiber that has to be stopped or does any job that
-  has to be undone on termination.
+  needs to be undone on termination.
 
-* ``validate_config()`` and ``apply_config()`` are *validation* and
-  *application* functions that make custom roles configurable. Implement
-  them if some configuration data has to be stored cluster-wide.
+* ``validate_config()`` and ``apply_config()`` are functions that *validate* and
+  *apply* the role's configuration.
+  Implement them if some configuration data needs to be stored cluster-wide.
 
 Next, get a grip on the :ref:`role's life cycle <cartridge-role-lifecycle>` to
-implement the necessary functions.
+implement the functions you need.
 
 .. _cartridge-role-dependencies:
 
@@ -318,7 +320,7 @@ For example:
 
    .. code-block:: lua
 
-      -- Role dependencies defined in custom-role.lua
+      -- Role dependencies defined in app/roles/custom-role.lua
       local role_name = 'custom-role'
       ...
       return {
@@ -344,6 +346,7 @@ Groups are specified in the cluster's configuration:
 
 .. code-block:: lua
 
+    -- Specify groups in init.lua
     cartridge.cfg({
         vshard_groups = {'hot', 'cold'},
         ...
@@ -359,7 +362,7 @@ The assignment can never be changed.
 Another limitation is that you cannot add groups dynamically
 (this will become available in future).
 
-Finally, mind the new syntax for router access.
+Finally, mind the syntax for router access.
 Every instance with a ``vshard-router`` role enabled initializes multiple
 routers. All of them are accessible through the role:
 
@@ -368,14 +371,16 @@ routers. All of them are accessible through the role:
     local router_role = cartridge.service_get('vshard-router')
     router_role.get('hot'):call(...)
 
-If you have no roles specified, you can access a static router as before:
+If you have no roles specified, you can access a static router as before
+(when Tarantool Cartridge was unaware of groups):
 
 .. code-block:: lua
 
     local vhsard = require('vshard')
     vshard.router.call(...)
 
-However, when using the new API, you must call a static router with a colon:
+However, when using the current group-aware API, you must call a static router
+with a colon:
 
 .. code-block:: lua
 
@@ -386,24 +391,26 @@ However, when using the new API, you must call a static router with a colon:
 .. _cartridge-role-lifecycle:
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-Role's life cycle and the order of function execution
+Role's life cycle (and the order of function execution)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-The cluster displays all custom role names along with the built-in ``vshard``
-ones in the web interface. Cluster administrators can enable and disable
-them for particular instances either via the web interface or cluster public
-API. For example:
+The cluster displays the names of all custom roles along with the built-in ``vshard-*``
+roles in the :ref:`web interface <cartridge-deployment>`.
+Cluster administrators can enable and disable them for particular instances --
+either via the web interface or via the cluster
+`public API <https://www.tarantool.io/en/rocks/cartridge/1.0/modules/cartridge.admin/#edit-topology-args>`_.
+For example:
 
 .. code-block:: kconfig
 
     cartridge.admin.edit_replicaset('replicaset-uuid', {roles = {'vshard-router', 'custom-role'}})
 
-If multiple roles are enabled on an instance at the same time, the cluster first
+If you enable multiple roles on an instance at the same time, the cluster first
 initializes the built-in roles (if any) and then the custom ones (if any) in the
 order the latter were listed in ``cartridge.cfg()``.
 
 If a custom role has dependent roles, the dependencies are registered and
-validated first, prior to the role itself.
+validated first, *prior* to the role itself.
 
 The cluster calls the role's functions in the following circumstances:
 
@@ -419,8 +426,8 @@ The cluster calls the role's functions in the following circumstances:
 
 * The ``apply_config()`` function upon every configuration update.
 
-Hence, if the cluster is tasked with performing the following actions, it
-will execute the functions listed in the following order:
+As a tryout, let's task the cluster with some actions and see the order of
+executing the role's functions:
 
 * Join an instance or create a replica set, both with an enabled role:
 
@@ -456,7 +463,7 @@ Considering the described behavior:
   * Configure the built-in :ref:`HTTP server <cartridge-httpd-instance>`.
   * Execute any code related to the role's initialization.
 
-* The ``stop()`` functions must undo any job that has to be undone on role's
+* The ``stop()`` functions must undo any job that needs to be undone on role's
   termination.
 
 * The ``validate_config()`` function must validate any configuration change.
@@ -464,7 +471,7 @@ Considering the described behavior:
 * The ``apply_config()`` function may execute any code related to a configuration
   change, e.g., take care of an ``expirationd`` fiber.
 
-The validation and application functions together allow you to customize the
+The validation and application functions together allow you to change the
 cluster-wide configuration as described in the
 :ref:`next section <cartridge-role-config>`.
 
@@ -481,26 +488,26 @@ You can:
 
   .. code-block:: yaml
 
-      # YAML configuration file
+      # in YAML configuration file
       my_role:
         notify_url: "https://localhost:8080"
 
   .. code-block:: lua
 
-      -- init.lua file
+      -- in init.lua file
       local notify_url = 'http://localhost'
       function my_role.apply_config(conf, opts)
         local conf = conf['my_role'] or {}
         notify_url = conf.notify_url or 'default'
       end
 
-* Download and upload cluster-wide configuration using
-  :ref:`cluster UI <cartridge-ui-configuration>` or
+* Download and upload cluster-wide configuration using the
+  :ref:`web interface <cartridge-ui-configuration>` or
   API (via GET/PUT queries to ``admin/config`` endpoint like
   ``curl localhost:8081/admin/config`` and
   ``curl -X PUT -d "{'my_parameter': 'value'}" localhost:8081/admin/config``).
 
-* Utilize it in your role ``apply_config()`` function.
+* Utilize it in your role's ``apply_config()`` function.
 
 Every instance in the cluster stores a copy of the configuration file in its
 working directory (configured by ``cartridge.cfg({workdir = ...})``):
@@ -508,16 +515,16 @@ working directory (configured by ``cartridge.cfg({workdir = ...})``):
 * ``/var/lib/tarantool/<instance_name>/config.yml`` for instances deployed from
   RPM packages and managed by ``systemd``.
 * ``/home/<username>/tarantool_state/var/lib/tarantool/config.yml`` for
-  instances deployed from archives.
+  instances deployed from tar+gz archives.
 
 The cluster's configuration is a Lua table, downloaded and uploaded as YAML.
-If some application-specific configuration data, e.g., a database schema as
-defined by DDL (data definition language), has to be stored on every instance
+If some application-specific configuration data, e.g. a database schema as
+defined by DDL (data definition language), needs to be stored on every instance
 in the cluster, you can implement your own API by adding a custom section to
 the table. The cluster will help you spread it safely across all instances.
 
-Such section goes in parallel (in the same file) with the topology-specific
-and ``vshard``-specific ones the cluster automatically generates.
+Such section goes in the same file with topology-specific
+and ``vshard``-specific sections that the cluster generates automatically.
 Unlike the generated, the custom section's modification, validation, and
 application logic has to be defined.
 
@@ -538,20 +545,20 @@ The common way is to define two functions:
     see the :ref:`next section <cartridge-role-config-apply>`.
 
 When implementing validation and application functions that call ``box``
-ones for some reason, the following precautions apply:
+ones for some reason, mind the following precautions:
 
 * Due to the :ref:`role's life cycle <cartridge-role-lifecycle>`, the cluster
   does not guarantee an automatic ``box.cfg()`` call prior to calling
   ``validate_config()``.
 
-  If the validation function is to call any ``box`` functions (e.g., to check
+  If the validation function calls any ``box`` functions (e.g., to check
   a format), make sure the calls are wrapped in a protective conditional
   statement that checks if ``box.cfg()`` has already happened:
 
   .. code-block:: Lua
      :emphasize-lines: 3
 
-     -- Inside the validation function:
+     -- Inside the validate_config() function:
 
      if type(box.cfg) == 'table' then
 
@@ -559,13 +566,13 @@ ones for some reason, the following precautions apply:
 
      end
 
-* Unlike the validation and similar to initialization function,
+* Unlike the validation function,
   ``apply_config()`` can call ``box`` functions freely as the cluster applies
   custom configuration after the automatic ``box.cfg()`` call.
 
   However, creating spaces, users, etc., can cause replication collisions when
   performed on both master and replica instances simultaneously. The appropriate
-  way is to call such ``box`` functions on masters only and let the changes
+  way is to call such ``box`` functions *on masters only* and let the changes
   propagate to replicas automatically.
 
   Upon the ``apply_config(conf, opts)`` execution, the cluster passes an
@@ -575,7 +582,7 @@ ones for some reason, the following precautions apply:
   .. code-block:: Lua
      :emphasize-lines: 3
 
-     -- Inside the configuration application function:
+     -- Inside the apply_config() function:
 
      if opts.is_master then
 
@@ -647,7 +654,7 @@ Applying custom role's configuration
 
 With the implementation showed by the :ref:`example <cartridge-role-config-example>`,
 you can call the ``set_secret()`` function to apply the new configuration via
-the administrative console or an HTTP endpoint if the role exports one.
+the administrative console -- or an HTTP endpoint if the role exports one.
 
 The ``set_secret()`` function calls ``cartridge.confapplier.patch_clusterwide()``
 which performs a two-phase commit:
@@ -668,7 +675,7 @@ which performs a two-phase commit:
    * If successful (i.e., returns ``true``), the instance saves the new
      configuration to a temporary file named ``config.prepare.yml`` within the
      working directory.
-   * (**Abort phase**) Otherwise, the instance reports an error and all other
+   * (**Abort phase**) Otherwise, the instance reports an error and all the other
      instances roll back the update: remove the file they may have already
      prepared.
 
@@ -676,9 +683,9 @@ which performs a two-phase commit:
    commits the changes. Every instance:
 
    #. Creates the active configuration's hard-link.
-   #. Atomically replaces the active one with the prepared. The atomic
-      replacement is indivisible -- it can either succeed or fail entirely,
-      never partially.
+   #. Atomically replaces the active configuration file with the prepared one.
+      The atomic replacement is indivisible -- it can either succeed or fail
+      entirely, never partially.
    #. Calls the ``apply_config()`` function of every registered role.
 
 If any of these steps fail, an error pops up in the web interface next to the
@@ -735,7 +742,7 @@ the ``init()`` function of some role, e.g. a role that exposes API over HTTP:
       end
    end
 
-For more information on the usage of Tarantool's HTTP server, see
+For more information on using Tarantool's HTTP server, see
 `its documentation <https://github.com/tarantool/http>`_.
 
 .. _cartridge-auth-enable:
