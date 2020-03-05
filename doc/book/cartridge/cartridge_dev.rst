@@ -4,9 +4,8 @@
 Tarantool Cartridge developer's guide
 ================================================================================
 
-For a quick start, skip the details below and jump right away to this detailed
-`guide <https://github.com/tarantool/cartridge-cli/blob/master/examples/getting-started-app/README.md>`_
-to creating a cluster-aware Tarantool application.
+For a quick start, skip the details below and jump right away to the
+:ref:`getting started guide <getting_started-cartridge>`.
 
 For a deep dive into what you can do with Tarantool Cartridge, go on with this section.
 
@@ -28,33 +27,9 @@ following steps:
 
 The following sections provide details for each of these steps.
 
-.. _cartridge-install:
+.. _cartridge-install-dev:
 
---------------------------------------------------------------------------------
-Installing Tarantool Cartridge
---------------------------------------------------------------------------------
-
-#. Install ``cartridge-cli``, a command-line tool for developing, deploying, and
-   managing Tarantool applications:
-
-   .. code-block:: console
-
-       $ tarantoolctl rocks install cartridge-cli
-
-   The Cartridge framework will come as a dependency when you create your project.
-
-   Everything will be installed to ``.rocks/bin``, so for convenient usage
-   add ``.rocks/bin`` to the executable path:
-
-   .. code-block:: console
-
-       $ export PATH=$PWD/.rocks/bin/:$PATH
-
-#. Install ``git``, a version control system.
-
-#. Install ``npm``, a package manager for ``node.js``.
-
-#. Install the ``unzip`` utility.
+.. include:: cartridge_install.rst
 
 .. _cartridge-templates:
 .. _cartridge-project:
