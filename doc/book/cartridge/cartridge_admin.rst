@@ -46,6 +46,8 @@ You can do this via the Web interface which is available at
 ``http://<instance_hostname>:<instance_http_port>``
 (in this example, ``http://localhost:3301``).
 
+.. _cartridge-deployment-steps:
+
 In the web interface, do the following:
 
 #. Depending on the authentication state:
@@ -60,7 +62,7 @@ In the web interface, do the following:
    * If disabled (for easier testing), simply proceed to configuring the
      cluster.
 
-#. Click **Сonfigure** next to the first unconfigured server to create the first
+#. Click **Configure** next to the first unconfigured server to create the first
    replica set -- solely for the router (intended for *compute-intensive* workloads).
 
    .. image:: images/unconfigured-router-border-5px.png

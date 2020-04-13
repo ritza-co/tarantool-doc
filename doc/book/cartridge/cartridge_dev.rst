@@ -5,9 +5,10 @@ Tarantool Cartridge developer's guide
 ================================================================================
 
 For a quick start, skip the details below and jump right away to the
-:ref:`getting started guide <getting_started-cartridge>`.
+:ref:`getting started guide <cartridge_getting_started>`.
 
-For a deep dive into what you can do with Tarantool Cartridge, go on with this section.
+For a deep dive into what you can develop with Tarantool Cartridge,
+go on with this section.
 
 To develop and start an application, in short, you need to go through the
 following steps:

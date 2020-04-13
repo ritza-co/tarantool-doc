@@ -15,5 +15,6 @@ This chapter contains the following sections:
    :numbered: 0
 
    cartridge_overview
+   cartridge_getting_started
    cartridge_dev
    cartridge_admin
