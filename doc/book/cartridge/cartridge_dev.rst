@@ -10,6 +10,12 @@ For a quick start, skip the details below and jump right away to the
 For a deep dive into what you can develop with Tarantool Cartridge,
 go on with this section.
 
+.. _cartridge-intro-dev:
+
+--------------------------------------------------------------------------------
+Introduction
+--------------------------------------------------------------------------------
+
 To develop and start an application, in short, you need to go through the
 following steps:
 

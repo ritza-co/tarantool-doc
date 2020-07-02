@@ -1,7 +1,7 @@
 .. _cartridge_getting_started:
 
 --------------------------------------------------------------------------------
-Getting started with Tarantool Cartridge
+Your first Tarantool Cartridge application
 --------------------------------------------------------------------------------
 
 Here we'll walk you through developing a simple cluster application.
@@ -15,88 +15,154 @@ First, set up the development environment:
 #. `Install <https://git-scm.com/book/en/v2/Getting-Started-Installing-Git>`_
    ``git``, a version control system.
 
-#. `Install <https://www.npmjs.com/get-npm>`_
-   ``npm``, a package manager for ``node.js``.
-
 #. `Install <https://linuxize.com/post/how-to-unzip-files-in-linux/>`_
    the ``unzip`` utility.
+
+#. `Install <https://gcc.gnu.org/install/>`_
+   the ``gcc`` compiler.
+
+#. `Install <https://cmake.org/install/>`_
+   the ``cmake`` and ``make`` tools.
 
 Now create an application named ``myapp``. Say:
 
 .. code-block:: console
 
-   cartridge create --name myapp
-   cd ./myapp
+    cartridge create --name myapp
 
-This will create a Cartridge application in the ``./myapp`` directory with
-a handful of template
-`files and directories <https://www.tarantool.io/en/doc/latest/book/cartridge/cartridge_cli/#creating-an-application-from-template>`_
+This will create a Tarantool Cartridge application in the ``./myapp`` directory
+with a handful of
+:ref:`template files and directories <creating-an-application-from-template>`
 inside.
 
-Make a dry run now:
+Go inside and make a dry run:
 
 .. code-block:: console
 
-   cartridge build
-   cartridge start
+    cd ./myapp
+    cartridge build
+    cartridge start
 
-This will build the application locally, start 5 instances of Tarantool and run
-our application as it is, with no business logic yet.
+This will build the application locally, start 5 instances of Tarantool, and
+run the application as it is, with no business logic yet.
 
-Why 5 instances? Check out the ``instances.yml`` file in your application
-directory. By default, it defines configuration for 5 Tarantool instances:
-one router, two storage masters, and two storage replicas.
-That's exactly what we need for this exercise.
+Why 5 instances? See the ``instances.yml`` file in your application directory.
+It contains the :ref:`configuration <cartridge-deployment>` of all instances
+that you can use in the cluster. By default, it defines configuration for 5
+Tarantool instances.
 
-Now it's time to add some business logic to our application. This will be an
-evergreen "Hello, world!" -- just to keep things simple.
+.. code-block:: yaml
 
-Duplicate the ``app/roles/custom.lua`` file and rename the copy to
-``hello_world.lua``:
+    myapp.router:
+      workdir: ./tmp/db_dev/3301
+      advertise_uri: localhost:3301
+      http_port: 8081
+
+    myapp.s1-master:
+      workdir: ./tmp/db_dev/3302
+      advertise_uri: localhost:3302
+      http_port: 8082
+
+    myapp.s1-replica:
+      workdir: ./tmp/db_dev/3303
+      advertise_uri: localhost:3303
+      http_port: 8083
+
+    myapp.s2-master:
+      workdir: ./tmp/db_dev/3304
+      advertise_uri: localhost:3304
+      http_port: 8084
+
+    myapp.s2-replica:
+      workdir: ./tmp/db_dev/3305
+      advertise_uri: localhost:3305
+      http_port: 8085
+
+You can already see these instances in the cluster management web interface at
+http://localhost:8081 (here 8081 is the HTTP port of the first instance
+specified in ``instances.yml``).
+
+.. image:: images/gs_cluster_dry_run.png
+   :align: center
+   :scale: 80%
+
+Okay, press ``Ctrl + C`` to stop the cluster for a while.
+
+Now it’s time to add some business logic to your application.
+This will be an evergreen "Hello world!"" -- just to keep things simple.
+
+Rename the template file ``app/roles/custom.lua`` to ``hello-world.lua``.
 
 .. code-block:: console
 
-   cp app/roles/custom.lua app/roles/hello_world.lua
+    mv app/roles/custom.lua app/roles/hello-world.lua
 
-This will be our custom role.
-Here we'll need to do the following:
+This will be your *role*. In Tarantool Cartridge, a role is a Lua module that
+implements some instance-specific functions and/or logic.
+Further on we'll show how to add code to a role, build it, enable and test.
 
-* Add our logic to the ``init()`` function:
+There is already some code in the role's ``init()`` function.
 
-  .. code-block:: lua
-     :emphasize-lines: 3-4
+.. code-block:: lua
+   :emphasize-lines: 5-7
 
-     local function init(opts)
+    local function init(opts) -- luacheck: no unused args
+        -- if opts.is_master then
+        -- end
 
-         local log = require('log')
-         log.info('Hello, world!')
+        local httpd = cartridge.service_get('httpd')
+        httpd:route({method = 'GET', path = '/hello'}, function()
+            return {body = 'Hello world!'}
+        end)
 
-         return true
-     end
+        return true
+    end
 
-  This will write ``Hello, world!`` to the console on cluster start.
-  No rocket science.
+This exports an HTTP endpoint ``/hello``. For example, http://localhost:8081/hello
+if you address the first instance from the ``instances.yml`` file.
+If you open it in a browser after enabling the role (we'll do it here a bit later),
+you'll see "Hello world!" on the page.
 
-* Add our role to the "return" section:
+Let's add some more code there.
 
-  .. code-block:: lua
-     :emphasize-lines: 2
+.. code-block:: lua
+   :emphasize-lines: 9-10
 
-     return {
-         role_name = 'app.roles.hello_world',
-         init = init,
-         stop = stop,
-         validate_config = validate_config,
-         apply_config = apply_config
-     }
+    local function init(opts) -- luacheck: no unused args
+        -- if opts.is_master then
+        -- end
 
-Why ``role_name = 'app.roles.hello_world'``? The role name should match the path
-from the application root (``./myapp``) to the custom role file
-(``app/roles/hello_world.lua``). If  we say ``role_name = 'hello_world'``
-in "return", the cluster won't find the role.
+        local httpd = cartridge.service_get('httpd')
+        httpd:route({method = 'GET', path = '/hello'}, function()
+            return {body = 'Hello world!'}
+        end)
 
-There's one more thing to do before we can run the application: we need to
-add our role to the list of cluster roles in the ``init.lua`` file.
+        local log = require('log')
+        log.info('Hello world!')
+
+        return true
+    end
+
+This writes "Hello, world!" to the console when the role gets enabled,
+so you'll have a chance to spot this. No rocket science.
+
+Next, amend ``role_name`` in the "return" section of the ``hello-world.lua`` file.
+This text will be displayed as a label for your role in the cluster management
+web interface.
+
+.. code-block:: lua
+   :emphasize-lines: 2
+
+    return {
+        role_name = 'Hello world!',
+        init = init,
+        stop = stop,
+        validate_config = validate_config,
+        apply_config = apply_config,
+    }
+
+The final thing to do before you can run the application is to add your role to
+the list of available cluster roles in the ``init.lua`` file.
 
 .. code-block:: lua
    :emphasize-lines: 6
@@ -106,43 +172,70 @@ add our role to the list of cluster roles in the ``init.lua`` file.
         roles = {
             'cartridge.roles.vshard-storage',
             'cartridge.roles.vshard-router',
-            'app.roles.hello_world'
+            'app.roles.hello-world'
         },
-        cluster_cookie = 'lenkis_app_1-cluster-cookie',
+        cluster_cookie = 'myapp-cluster-cookie',
     })
 
-Now the cluster will be aware of our role.
+Now the cluster will be aware of your role.
 
-Fine! Let's re-build the application and start the cluster now:
+Why ``app.roles.hello-world?`` By default, the role name here should match the
+path from the application root (``./myapp``) to the role file
+(``app/roles/hello-world.lua``).
 
-.. code-block:: console
-
-   cartridge build
-   cartridge start
-
-In the console output, we'll see a line like this:
+Fine! Your role is ready. Re-build the application and re-start the cluster now:
 
 .. code-block:: console
 
-   router | 2020-04-10 14:23:30.675 [8209] main/108/lua I> Hello, world!
+    cartridge build
+    cartridge start
 
-Yeah, that's our business logic speaking. The application is ready to deploy!
+Now all instances are up, but idle, waiting for you to enable roles for them.
 
-Now open the cluster management web interface at
-``http://localhost:8081`` (this is the default HTTP port of the router
-instance specified in ``init.lua``) and follow
-:ref:`this guide <cartridge-deployment-steps>` to set up the cluster and try out
-some cool cluster management features.
+Instances (replicas) in a Tarantool Cartridge cluster are organized into
+*replica sets*. Roles are enabled per replica set, so all instances in a
+replica set have the same roles enabled.
 
-To stop the cluster after you're done with experiments, press ``Ctrl + C``.
+Let's create a replica set containing just one instance and enable your role:
 
-As a final touch, let's pack our application into a distributable, e.g. into an
-RPM package:
+#. Open the cluster management web interface at http://localhost:8081.
+#. Click **Configure**.
+#. Check the role ``Hello world!`` to enable it. Notice that the role name here
+   matches the label text that you specified in the ``role_name`` parameter in
+   the ``hello-world.lua`` file.
+#. (Optionally) Specify the replica set name, for example
+   "hello-world-replica-set".
 
-   .. code-block::
+   .. image:: images/gs_cluster_create_replica_set.png
+      :align: center
+      :scale: 80%
 
-      cartridge pack rpm
+#. Click **Create replica set** and see the newly-created replica set
+   in the web interface.
 
-You can also
-`pack <https://www.tarantool.io/en/doc/2.2/book/cartridge/cartridge_cli/#packing-an-application>`_.
-it as a DEB package, a TGZ archive, or a Docker image.
+.. image:: images/gs_cluster_new_replica_set.png
+   :align: center
+   :scale: 80%
+
+Your custom role got enabled. Find the "Hello world!" message in console,
+like this:
+
+.. image:: images/gs_cluster_hello_world_console.png
+   :align: center
+   :scale: 80%
+
+Finally, open the HTTP endpoint of this instance at
+http://localhost:8081/hello and see the reply to your GET request.
+
+.. image:: images/gs_cluster_hello_http.png
+   :align: center
+   :scale: 80%
+
+Everything is up and running! What's next?
+
+* Follow :ref:`this guide <cartridge-deployment>` to set up the rest of the
+  cluster and try some cool cluster management features.
+* Get inspired with `these examples <https://github.com/tarantool/examples/>`_
+  and implement more sophisticated business logic for your role.
+* :ref:`Pack <packing-an-application>` your application for easy distribution.
+  Choose what you like: a DEB or RPM package, a TGZ archive, or a Docker image.
