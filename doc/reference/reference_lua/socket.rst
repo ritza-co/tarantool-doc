@@ -610,7 +610,9 @@ the function invocations will look like ``sock:function_name(...)``.
 
 The LuaSocket API has functions that are equivalent to the ones described above,
 with different names and parameters, for example ``connect()``
-rather than ``tcp_connect()``. Tarantool supports these functions so that
+rather than ``tcp_connect()``,
+as well as ``getpeername``, ``getsockname``, ``setoption``, ``settimeout``.
+Tarantool supports these functions so that
 third-party packages which depend on them will work.
 
 The LuaSocket project is on
