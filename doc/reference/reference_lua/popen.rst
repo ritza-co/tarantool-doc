@@ -330,19 +330,6 @@ Below is a list of all ``popen`` functions and handle methods.
     Example 4 demonstrates how to run a stream program (like ``grep``, ``sed``
     and so on), write to its stdin and read from its stdout.
 
-    The example assumes that input data are small enough to fit in
-    a pipe buffer (typically 64 KiB, but this depends on the platform
-    and its configuration).
-
-    If a process writes lengthy data, it will get stuck in
-    :ref:`popen_handle:write() <popen-write>`.
-    To handle this case: call :ref:`popen_handle:read() <popen-read>` in a loop in
-    another fiber (start it before the first ``:write()``).
-
-    If a process writes lengthy text to stderr, it may get stick in ``write()``
-    because the stderr pipe buffer becomes full.
-    To handle this case: read stderr in a separate fiber.
-
     .. code-block:: lua
 
         local function call_jq(input, filter)
@@ -378,6 +365,20 @@ Below is a list of all ``popen`` functions and handle methods.
             -- Glue all chunks, strip trailing newline.
             return table.concat(chunks):rstrip()
         end
+
+    The example assumes that input data are small enough to fit in
+    a pipe buffer (typically 64 KiB, but this depends on the platform
+    and its configuration).
+
+    If a process writes lengthy data, it will get stuck in
+    :ref:`popen_handle:write() <popen-write>`.
+    To handle this case: call :ref:`popen_handle:read() <popen-read>` in a loop in
+    another fiber (start it before the first ``:write()``).
+
+    If a process writes lengthy text to stderr, it may get stick in ``write()``
+    because the stderr pipe buffer becomes full.
+    To handle this case: read stderr in a separate fiber.
+
 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
                       popen handle methods
 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
