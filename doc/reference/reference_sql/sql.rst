@@ -1793,7 +1793,8 @@ time support SCALAR, which other DBMSs do not have.
 
 Limitations (`Issue#3809 <https://github.com/tarantool/tarantool/issues/3809>`_): |br|
 Result of concatenation, or out-of-bound result, may have wrong type. |br|
-Parameter conversion behavior will change (`Issue#4159 <https://github.com/tarantool/tarantool/issues/4159>`_). After issue#4159 is done, LENGTH(15) will be illegal.
+Parameter conversion behavior will change (`Issue#4159 <https://github.com/tarantool/tarantool/issues/4159>`_). After issue#4159 is done, LENGTH(15) will be illegal. |br|
+Implicit cast behavior will change  (`Issue#3809 <https://github.com/tarantool/tarantool/issues/3809>`_). Starting in Tarantool version 2.5.1, implicit cast from STRING to number, or from number to STRING, will be illegal.
 
 Statements
 
@@ -4787,7 +4788,7 @@ and returns:
     - row_count: 1
     ...
 
-It is functionally the same thing as an :ref:`UPDATE statement:
+It is functionally the same thing as an :ref:`UPDATE Statement <sql_update>`:
 
 .. code-block:: none
 
