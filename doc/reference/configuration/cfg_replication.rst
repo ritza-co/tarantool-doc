@@ -203,7 +203,7 @@
     gets no heartbeats.
 
     | Type: float
-    | Default: 4
+    | Default: 30
     | Dynamic: **yes**
 
 .. _cfg_replication-replication_connect_quorum:
@@ -315,7 +315,7 @@
     every ``replication_timeout`` seconds, and each replica sends an ACK packet back.
 
     Both master and replicas are programmed to drop the connection if they get no
-    response in four ``replication_timeout`` seconds.
+    response in four ``replication_timeout`` periods.
     If the connection is dropped, a replica tries to reconnect to the master.
 
     See more in :ref:`Monitoring a replica set <replication-monitoring>`.
