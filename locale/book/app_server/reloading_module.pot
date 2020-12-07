@@ -106,6 +106,9 @@ msgstr ""
 msgid "Reloading a module in C"
 msgstr ""
 
-msgid "After you compiled a new version of a C module (``*.so`` shared library), call :ref:`box.schema.func.reload('module-name') <box_schema-func_reload>` from your Lua script to reload the module."
+msgid "After you have compiled a new version of a C module (``*.so`` shared library), call :ref:`box.schema.func.reload('module-name') <box_schema-func_reload>` from your Lua script to reload the module."
+msgstr ""
+
+msgid "Starting in Tarantool version 2.3, ``reload()`` will create a temporary file to store the module if any of its functions is still running. The directory for this file is what is specified in the TMPDIR environment variable, or it is /tmp if the TMPDIR environment variable is blank."
 msgstr ""
 
