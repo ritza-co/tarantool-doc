@@ -433,7 +433,7 @@ Below is a list of all ``box.space`` functions and members.
     * **scalar**: null (input with ``msgpack.NULL`` or ``yaml.NULL`` or ``json.NULL``),
       booleans (true or false), or integers between
       -9223372036854775808 and 18446744073709551615, or single-precision
-      floating point numbers, or double-precison floating-point numbers, or
+      floating point numbers, or double-precision floating-point numbers, or
       exact numbers, or strings, or (varbinary) byte arrays.
       When there is a mix of types, the key order is: null, then
       booleans, then numbers, then strings, then byte arrays. Legal in memtx TREE or
@@ -671,7 +671,7 @@ Below is a list of all ``box.space`` functions and members.
         box.space.x:create_index('i',{parts={{field = 1, type = 'string'}}})
         -- Step 2: Make the function.
         -- The function expects a tuple. In this example it will work on tuple[2]
-        -- because the key souce is field number 2 in what we will insert.
+        -- because the key source is field number 2 in what we will insert.
         -- Use string.sub() from the string module to get the first character.
         lua_code = [[function(tuple) return {string.sub(tuple[2],1,1)} end]]
         -- Step 3: Make the function persistent.
