@@ -1,0 +1,2073 @@
+[main]
+host = https://www.transifex.com
+
+[tarantool-docs.index]
+file_filter = locale/<lang>/LC_MESSAGES/index.po
+source_file = locale/en/index.pot
+source_lang = en
+type = PO
+
+[tarantool-docs.whats_new]
+file_filter = locale/<lang>/LC_MESSAGES/whats_new.po
+source_file = locale/en/whats_new.pot
+source_lang = en
+type = PO
+
+[tarantool-docs.archive--intro]
+file_filter = locale/<lang>/LC_MESSAGES/archive/intro.po
+source_file = locale/en/archive/intro.pot
+source_lang = en
+type = PO
+
+[tarantool-docs.archive--shard]
+file_filter = locale/<lang>/LC_MESSAGES/archive/shard.po
+source_file = locale/en/archive/shard.pot
+source_lang = en
+type = PO
+
+[tarantool-docs.archive--tdb]
+file_filter = locale/<lang>/LC_MESSAGES/archive/tdb.po
+source_file = locale/en/archive/tdb.pot
+source_lang = en
+type = PO
+
+[tarantool-docs.book--faq]
+file_filter = locale/<lang>/LC_MESSAGES/book/faq.po
+source_file = locale/en/book/faq.pot
+source_lang = en
+type = PO
+
+[tarantool-docs.book--index]
+file_filter = locale/<lang>/LC_MESSAGES/book/index.po
+source_file = locale/en/book/index.pot
+source_lang = en
+type = PO
+
+[tarantool-docs.book--intro]
+file_filter = locale/<lang>/LC_MESSAGES/book/intro.po
+source_file = locale/en/book/intro.pot
+source_lang = en
+type = PO
+
+[tarantool-docs.book--sql]
+file_filter = locale/<lang>/LC_MESSAGES/book/sql.po
+source_file = locale/en/book/sql.pot
+source_lang = en
+type = PO
+
+[tarantool-docs.book--admin--backups]
+file_filter = locale/<lang>/LC_MESSAGES/book/admin/backups.po
+source_file = locale/en/book/admin/backups.pot
+source_lang = en
+type = PO
+
+[tarantool-docs.book--admin--bug_reports]
+file_filter = locale/<lang>/LC_MESSAGES/book/admin/bug_reports.po
+source_file = locale/en/book/admin/bug_reports.pot
+source_lang = en
+type = PO
+
+[tarantool-docs.book--admin--daemon_supervision]
+file_filter = locale/<lang>/LC_MESSAGES/book/admin/daemon_supervision.po
+source_file = locale/en/book/admin/daemon_supervision.pot
+source_lang = en
+type = PO
+
+[tarantool-docs.book--admin--disaster_recovery]
+file_filter = locale/<lang>/LC_MESSAGES/book/admin/disaster_recovery.po
+source_file = locale/en/book/admin/disaster_recovery.pot
+source_lang = en
+type = PO
+
+[tarantool-docs.book--admin--index]
+file_filter = locale/<lang>/LC_MESSAGES/book/admin/index.po
+source_file = locale/en/book/admin/index.pot
+source_lang = en
+type = PO
+
+[tarantool-docs.book--admin--instance_config]
+file_filter = locale/<lang>/LC_MESSAGES/book/admin/instance_config.po
+source_file = locale/en/book/admin/instance_config.pot
+source_lang = en
+type = PO
+
+[tarantool-docs.book--admin--logs]
+file_filter = locale/<lang>/LC_MESSAGES/book/admin/logs.po
+source_file = locale/en/book/admin/logs.pot
+source_lang = en
+type = PO
+
+[tarantool-docs.book--admin--os_notes]
+file_filter = locale/<lang>/LC_MESSAGES/book/admin/os_notes.po
+source_file = locale/en/book/admin/os_notes.pot
+source_lang = en
+type = PO
+
+[tarantool-docs.book--admin--security]
+file_filter = locale/<lang>/LC_MESSAGES/book/admin/security.po
+source_file = locale/en/book/admin/security.pot
+source_lang = en
+type = PO
+
+[tarantool-docs.book--admin--server_introspection]
+file_filter = locale/<lang>/LC_MESSAGES/book/admin/server_introspection.po
+source_file = locale/en/book/admin/server_introspection.pot
+source_lang = en
+type = PO
+
+[tarantool-docs.book--admin--start_stop_instance]
+file_filter = locale/<lang>/LC_MESSAGES/book/admin/start_stop_instance.po
+source_file = locale/en/book/admin/start_stop_instance.pot
+source_lang = en
+type = PO
+
+[tarantool-docs.book--admin--troubleshoot]
+file_filter = locale/<lang>/LC_MESSAGES/book/admin/troubleshoot.po
+source_file = locale/en/book/admin/troubleshoot.pot
+source_lang = en
+type = PO
+
+[tarantool-docs.book--admin--upgrades]
+file_filter = locale/<lang>/LC_MESSAGES/book/admin/upgrades.po
+source_file = locale/en/book/admin/upgrades.pot
+source_lang = en
+type = PO
+
+[tarantool-docs.book--app_server--contributing_module]
+file_filter = locale/<lang>/LC_MESSAGES/book/app_server/contributing_module.po
+source_file = locale/en/book/app_server/contributing_module.pot
+source_lang = en
+type = PO
+
+[tarantool-docs.book--app_server--cookbook]
+file_filter = locale/<lang>/LC_MESSAGES/book/app_server/cookbook.po
+source_file = locale/en/book/app_server/cookbook.pot
+source_lang = en
+type = PO
+
+[tarantool-docs.book--app_server--creating_app]
+file_filter = locale/<lang>/LC_MESSAGES/book/app_server/creating_app.po
+source_file = locale/en/book/app_server/creating_app.pot
+source_lang = en
+type = PO
+
+[tarantool-docs.book--app_server--index]
+file_filter = locale/<lang>/LC_MESSAGES/book/app_server/index.po
+source_file = locale/en/book/app_server/index.pot
+source_lang = en
+type = PO
+
+[tarantool-docs.book--app_server--installing_module]
+file_filter = locale/<lang>/LC_MESSAGES/book/app_server/installing_module.po
+source_file = locale/en/book/app_server/installing_module.pot
+source_lang = en
+type = PO
+
+[tarantool-docs.book--app_server--launching_app]
+file_filter = locale/<lang>/LC_MESSAGES/book/app_server/launching_app.po
+source_file = locale/en/book/app_server/launching_app.pot
+source_lang = en
+type = PO
+
+[tarantool-docs.book--app_server--reloading_module]
+file_filter = locale/<lang>/LC_MESSAGES/book/app_server/reloading_module.po
+source_file = locale/en/book/app_server/reloading_module.pot
+source_lang = en
+type = PO
+
+[tarantool-docs.book--app_server--using_ide]
+file_filter = locale/<lang>/LC_MESSAGES/book/app_server/using_ide.po
+source_file = locale/en/book/app_server/using_ide.pot
+source_lang = en
+type = PO
+
+[tarantool-docs.book--box--atomic]
+file_filter = locale/<lang>/LC_MESSAGES/book/box/atomic.po
+source_file = locale/en/book/box/atomic.pot
+source_lang = en
+type = PO
+
+[tarantool-docs.book--box--authentication]
+file_filter = locale/<lang>/LC_MESSAGES/book/box/authentication.po
+source_file = locale/en/book/box/authentication.pot
+source_lang = en
+type = PO
+
+[tarantool-docs.book--box--data_model]
+file_filter = locale/<lang>/LC_MESSAGES/book/box/data_model.po
+source_file = locale/en/book/box/data_model.pot
+source_lang = en
+type = PO
+
+[tarantool-docs.book--box--index]
+file_filter = locale/<lang>/LC_MESSAGES/book/box/index.po
+source_file = locale/en/book/box/index.pot
+source_lang = en
+type = PO
+
+[tarantool-docs.book--box--indexes]
+file_filter = locale/<lang>/LC_MESSAGES/book/box/indexes.po
+source_file = locale/en/book/box/indexes.pot
+source_lang = en
+type = PO
+
+[tarantool-docs.book--box--limitations]
+file_filter = locale/<lang>/LC_MESSAGES/book/box/limitations.po
+source_file = locale/en/book/box/limitations.pot
+source_lang = en
+type = PO
+
+[tarantool-docs.book--box--triggers]
+file_filter = locale/<lang>/LC_MESSAGES/book/box/triggers.po
+source_file = locale/en/book/box/triggers.pot
+source_lang = en
+type = PO
+
+[tarantool-docs.book--box--engines--index]
+file_filter = locale/<lang>/LC_MESSAGES/book/box/engines/index.po
+source_file = locale/en/book/box/engines/index.pot
+source_lang = en
+type = PO
+
+[tarantool-docs.book--cartridge--cartridge_overview]
+file_filter = locale/<lang>/LC_MESSAGES/book/cartridge/cartridge_overview.po
+source_file = locale/en/book/cartridge/cartridge_overview.pot
+source_lang = en
+type = PO
+
+[tarantool-docs.book--connectors--index]
+file_filter = locale/<lang>/LC_MESSAGES/book/connectors/index.po
+source_file = locale/en/book/connectors/index.pot
+source_lang = en
+type = PO
+
+[tarantool-docs.book--replication--index]
+file_filter = locale/<lang>/LC_MESSAGES/book/replication/index.po
+source_file = locale/en/book/replication/index.pot
+source_lang = en
+type = PO
+
+[tarantool-docs.book--replication--repl_add_instances]
+file_filter = locale/<lang>/LC_MESSAGES/book/replication/repl_add_instances.po
+source_file = locale/en/book/replication/repl_add_instances.pot
+source_lang = en
+type = PO
+
+[tarantool-docs.book--replication--repl_architecture]
+file_filter = locale/<lang>/LC_MESSAGES/book/replication/repl_architecture.po
+source_file = locale/en/book/replication/repl_architecture.pot
+source_lang = en
+type = PO
+
+[tarantool-docs.book--replication--repl_bootstrap]
+file_filter = locale/<lang>/LC_MESSAGES/book/replication/repl_bootstrap.po
+source_file = locale/en/book/replication/repl_bootstrap.pot
+source_lang = en
+type = PO
+
+[tarantool-docs.book--replication--repl_leader_elect]
+file_filter = locale/<lang>/LC_MESSAGES/book/replication/repl_leader_elect.po
+source_file = locale/en/book/replication/repl_leader_elect.pot
+source_lang = en
+type = PO
+
+[tarantool-docs.book--replication--repl_monitoring]
+file_filter = locale/<lang>/LC_MESSAGES/book/replication/repl_monitoring.po
+source_file = locale/en/book/replication/repl_monitoring.pot
+source_lang = en
+type = PO
+
+[tarantool-docs.book--replication--repl_problem_solving]
+file_filter = locale/<lang>/LC_MESSAGES/book/replication/repl_problem_solving.po
+source_file = locale/en/book/replication/repl_problem_solving.pot
+source_lang = en
+type = PO
+
+[tarantool-docs.book--replication--repl_recover]
+file_filter = locale/<lang>/LC_MESSAGES/book/replication/repl_recover.po
+source_file = locale/en/book/replication/repl_recover.pot
+source_lang = en
+type = PO
+
+[tarantool-docs.book--replication--repl_remove_instances]
+file_filter = locale/<lang>/LC_MESSAGES/book/replication/repl_remove_instances.po
+source_file = locale/en/book/replication/repl_remove_instances.pot
+source_lang = en
+type = PO
+
+[tarantool-docs.book--replication--repl_reseed]
+file_filter = locale/<lang>/LC_MESSAGES/book/replication/repl_reseed.po
+source_file = locale/en/book/replication/repl_reseed.pot
+source_lang = en
+type = PO
+
+[tarantool-docs.book--replication--repl_sync]
+file_filter = locale/<lang>/LC_MESSAGES/book/replication/repl_sync.po
+source_file = locale/en/book/replication/repl_sync.pot
+source_lang = en
+type = PO
+
+[tarantool-docs.contributing--contributing]
+file_filter = locale/<lang>/LC_MESSAGES/contributing/contributing.po
+source_file = locale/en/contributing/contributing.pot
+source_lang = en
+type = PO
+
+[tarantool-docs.contributing--index]
+file_filter = locale/<lang>/LC_MESSAGES/contributing/index.po
+source_file = locale/en/contributing/index.pot
+source_lang = en
+type = PO
+
+[tarantool-docs.dev_guide--build_contribute_index]
+file_filter = locale/<lang>/LC_MESSAGES/dev_guide/build_contribute_index.po
+source_file = locale/en/dev_guide/build_contribute_index.pot
+source_lang = en
+type = PO
+
+[tarantool-docs.dev_guide--building_from_source]
+file_filter = locale/<lang>/LC_MESSAGES/dev_guide/building_from_source.po
+source_file = locale/en/dev_guide/building_from_source.pot
+source_lang = en
+type = PO
+
+[tarantool-docs.dev_guide--c_style_guide]
+file_filter = locale/<lang>/LC_MESSAGES/dev_guide/c_style_guide.po
+source_file = locale/en/dev_guide/c_style_guide.pot
+source_lang = en
+type = PO
+
+[tarantool-docs.dev_guide--developer_guidelines]
+file_filter = locale/<lang>/LC_MESSAGES/dev_guide/developer_guidelines.po
+source_file = locale/en/dev_guide/developer_guidelines.pot
+source_lang = en
+type = PO
+
+[tarantool-docs.dev_guide--documentation_guidelines]
+file_filter = locale/<lang>/LC_MESSAGES/dev_guide/documentation_guidelines.po
+source_file = locale/en/dev_guide/documentation_guidelines.pot
+source_lang = en
+type = PO
+
+[tarantool-docs.dev_guide--guidelines_index]
+file_filter = locale/<lang>/LC_MESSAGES/dev_guide/guidelines_index.po
+source_file = locale/en/dev_guide/guidelines_index.pot
+source_lang = en
+type = PO
+
+[tarantool-docs.dev_guide--index]
+file_filter = locale/<lang>/LC_MESSAGES/dev_guide/index.po
+source_file = locale/en/dev_guide/index.pot
+source_lang = en
+type = PO
+
+[tarantool-docs.dev_guide--lua_style_guide]
+file_filter = locale/<lang>/LC_MESSAGES/dev_guide/lua_style_guide.po
+source_file = locale/en/dev_guide/lua_style_guide.pot
+source_lang = en
+type = PO
+
+[tarantool-docs.dev_guide--python_style_guide]
+file_filter = locale/<lang>/LC_MESSAGES/dev_guide/python_style_guide.po
+source_file = locale/en/dev_guide/python_style_guide.pot
+source_lang = en
+type = PO
+
+[tarantool-docs.dev_guide--release_management]
+file_filter = locale/<lang>/LC_MESSAGES/dev_guide/release_management.po
+source_file = locale/en/dev_guide/release_management.pot
+source_lang = en
+type = PO
+
+[tarantool-docs.dev_guide--internals--box_protocol]
+file_filter = locale/<lang>/LC_MESSAGES/dev_guide/internals/box_protocol.po
+source_file = locale/en/dev_guide/internals/box_protocol.pot
+source_lang = en
+type = PO
+
+[tarantool-docs.dev_guide--internals--file_formats]
+file_filter = locale/<lang>/LC_MESSAGES/dev_guide/internals/file_formats.po
+source_file = locale/en/dev_guide/internals/file_formats.pot
+source_lang = en
+type = PO
+
+[tarantool-docs.dev_guide--internals--index]
+file_filter = locale/<lang>/LC_MESSAGES/dev_guide/internals/index.po
+source_file = locale/en/dev_guide/internals/index.pot
+source_lang = en
+type = PO
+
+[tarantool-docs.dev_guide--internals--msgpack_extensions]
+file_filter = locale/<lang>/LC_MESSAGES/dev_guide/internals/msgpack_extensions.po
+source_file = locale/en/dev_guide/internals/msgpack_extensions.pot
+source_lang = en
+type = PO
+
+[tarantool-docs.dev_guide--internals--recovery_internals]
+file_filter = locale/<lang>/LC_MESSAGES/dev_guide/internals/recovery_internals.po
+source_file = locale/en/dev_guide/internals/recovery_internals.pot
+source_lang = en
+type = PO
+
+[tarantool-docs.dev_guide--internals--replication_internals]
+file_filter = locale/<lang>/LC_MESSAGES/dev_guide/internals/replication_internals.po
+source_file = locale/en/dev_guide/internals/replication_internals.pot
+source_lang = en
+type = PO
+
+[tarantool-docs.dev_guide--internals--sql_protocol]
+file_filter = locale/<lang>/LC_MESSAGES/dev_guide/internals/sql_protocol.po
+source_file = locale/en/dev_guide/internals/sql_protocol.pot
+source_lang = en
+type = PO
+
+[tarantool-docs.dev_guide--reference_capi--box]
+file_filter = locale/<lang>/LC_MESSAGES/dev_guide/reference_capi/box.po
+source_file = locale/en/dev_guide/reference_capi/box.pot
+source_lang = en
+type = PO
+
+[tarantool-docs.dev_guide--reference_capi--box_index]
+file_filter = locale/<lang>/LC_MESSAGES/dev_guide/reference_capi/box_index.po
+source_file = locale/en/dev_guide/reference_capi/box_index.pot
+source_lang = en
+type = PO
+
+[tarantool-docs.dev_guide--reference_capi--clock]
+file_filter = locale/<lang>/LC_MESSAGES/dev_guide/reference_capi/clock.po
+source_file = locale/en/dev_guide/reference_capi/clock.pot
+source_lang = en
+type = PO
+
+[tarantool-docs.dev_guide--reference_capi--coio]
+file_filter = locale/<lang>/LC_MESSAGES/dev_guide/reference_capi/coio.po
+source_file = locale/en/dev_guide/reference_capi/coio.pot
+source_lang = en
+type = PO
+
+[tarantool-docs.dev_guide--reference_capi--error]
+file_filter = locale/<lang>/LC_MESSAGES/dev_guide/reference_capi/error.po
+source_file = locale/en/dev_guide/reference_capi/error.pot
+source_lang = en
+type = PO
+
+[tarantool-docs.dev_guide--reference_capi--fiber]
+file_filter = locale/<lang>/LC_MESSAGES/dev_guide/reference_capi/fiber.po
+source_file = locale/en/dev_guide/reference_capi/fiber.pot
+source_lang = en
+type = PO
+
+[tarantool-docs.dev_guide--reference_capi--index]
+file_filter = locale/<lang>/LC_MESSAGES/dev_guide/reference_capi/index.po
+source_file = locale/en/dev_guide/reference_capi/index.pot
+source_lang = en
+type = PO
+
+[tarantool-docs.dev_guide--reference_capi--latch]
+file_filter = locale/<lang>/LC_MESSAGES/dev_guide/reference_capi/latch.po
+source_file = locale/en/dev_guide/reference_capi/latch.pot
+source_lang = en
+type = PO
+
+[tarantool-docs.dev_guide--reference_capi--say]
+file_filter = locale/<lang>/LC_MESSAGES/dev_guide/reference_capi/say.po
+source_file = locale/en/dev_guide/reference_capi/say.pot
+source_lang = en
+type = PO
+
+[tarantool-docs.dev_guide--reference_capi--schema]
+file_filter = locale/<lang>/LC_MESSAGES/dev_guide/reference_capi/schema.po
+source_file = locale/en/dev_guide/reference_capi/schema.pot
+source_lang = en
+type = PO
+
+[tarantool-docs.dev_guide--reference_capi--trivia]
+file_filter = locale/<lang>/LC_MESSAGES/dev_guide/reference_capi/trivia.po
+source_file = locale/en/dev_guide/reference_capi/trivia.pot
+source_lang = en
+type = PO
+
+[tarantool-docs.dev_guide--reference_capi--tuple]
+file_filter = locale/<lang>/LC_MESSAGES/dev_guide/reference_capi/tuple.po
+source_file = locale/en/dev_guide/reference_capi/tuple.pot
+source_lang = en
+type = PO
+
+[tarantool-docs.dev_guide--reference_capi--txn]
+file_filter = locale/<lang>/LC_MESSAGES/dev_guide/reference_capi/txn.po
+source_file = locale/en/dev_guide/reference_capi/txn.pot
+source_lang = en
+type = PO
+
+[tarantool-docs.dev_guide--reference_capi--utils]
+file_filter = locale/<lang>/LC_MESSAGES/dev_guide/reference_capi/utils.po
+source_file = locale/en/dev_guide/reference_capi/utils.pot
+source_lang = en
+type = PO
+
+[tarantool-docs.getting_started--getting_started_cartridge]
+file_filter = locale/<lang>/LC_MESSAGES/getting_started/getting_started_cartridge.po
+source_file = locale/en/getting_started/getting_started_cartridge.pot
+source_lang = en
+type = PO
+
+[tarantool-docs.getting_started--getting_started_connectors]
+file_filter = locale/<lang>/LC_MESSAGES/getting_started/getting_started_connectors.po
+source_file = locale/en/getting_started/getting_started_connectors.pot
+source_lang = en
+type = PO
+
+[tarantool-docs.getting_started--getting_started_db]
+file_filter = locale/<lang>/LC_MESSAGES/getting_started/getting_started_db.po
+source_file = locale/en/getting_started/getting_started_db.pot
+source_lang = en
+type = PO
+
+[tarantool-docs.getting_started--getting_started_go]
+file_filter = locale/<lang>/LC_MESSAGES/getting_started/getting_started_go.po
+source_file = locale/en/getting_started/getting_started_go.pot
+source_lang = en
+type = PO
+
+[tarantool-docs.getting_started--getting_started_php]
+file_filter = locale/<lang>/LC_MESSAGES/getting_started/getting_started_php.po
+source_file = locale/en/getting_started/getting_started_php.pot
+source_lang = en
+type = PO
+
+[tarantool-docs.getting_started--getting_started_python]
+file_filter = locale/<lang>/LC_MESSAGES/getting_started/getting_started_python.po
+source_file = locale/en/getting_started/getting_started_python.pot
+source_lang = en
+type = PO
+
+[tarantool-docs.getting_started--index]
+file_filter = locale/<lang>/LC_MESSAGES/getting_started/index.po
+source_file = locale/en/getting_started/index.pot
+source_lang = en
+type = PO
+
+[tarantool-docs.getting_started--using_binary]
+file_filter = locale/<lang>/LC_MESSAGES/getting_started/using_binary.po
+source_file = locale/en/getting_started/using_binary.pot
+source_lang = en
+type = PO
+
+[tarantool-docs.getting_started--using_docker]
+file_filter = locale/<lang>/LC_MESSAGES/getting_started/using_docker.po
+source_file = locale/en/getting_started/using_docker.pot
+source_lang = en
+type = PO
+
+[tarantool-docs.reference--index]
+file_filter = locale/<lang>/LC_MESSAGES/reference/index.po
+source_file = locale/en/reference/index.pot
+source_lang = en
+type = PO
+
+[tarantool-docs.reference--interactive_console]
+file_filter = locale/<lang>/LC_MESSAGES/reference/interactive_console.po
+source_file = locale/en/reference/interactive_console.pot
+source_lang = en
+type = PO
+
+[tarantool-docs.reference--lua_tips]
+file_filter = locale/<lang>/LC_MESSAGES/reference/lua_tips.po
+source_file = locale/en/reference/lua_tips.pot
+source_lang = en
+type = PO
+
+[tarantool-docs.reference--tarantoolctl]
+file_filter = locale/<lang>/LC_MESSAGES/reference/tarantoolctl.po
+source_file = locale/en/reference/tarantoolctl.pot
+source_lang = en
+type = PO
+
+[tarantool-docs.reference--configuration--index]
+file_filter = locale/<lang>/LC_MESSAGES/reference/configuration/index.po
+source_file = locale/en/reference/configuration/index.pot
+source_lang = en
+type = PO
+
+[tarantool-docs.reference--reference_lua--box]
+file_filter = locale/<lang>/LC_MESSAGES/reference/reference_lua/box.po
+source_file = locale/en/reference/reference_lua/box.pot
+source_lang = en
+type = PO
+
+[tarantool-docs.reference--reference_lua--box_backup]
+file_filter = locale/<lang>/LC_MESSAGES/reference/reference_lua/box_backup.po
+source_file = locale/en/reference/reference_lua/box_backup.pot
+source_lang = en
+type = PO
+
+[tarantool-docs.reference--reference_lua--box_cfg]
+file_filter = locale/<lang>/LC_MESSAGES/reference/reference_lua/box_cfg.po
+source_file = locale/en/reference/reference_lua/box_cfg.pot
+source_lang = en
+type = PO
+
+[tarantool-docs.reference--reference_lua--box_ctl]
+file_filter = locale/<lang>/LC_MESSAGES/reference/reference_lua/box_ctl.po
+source_file = locale/en/reference/reference_lua/box_ctl.pot
+source_lang = en
+type = PO
+
+[tarantool-docs.reference--reference_lua--box_error]
+file_filter = locale/<lang>/LC_MESSAGES/reference/reference_lua/box_error.po
+source_file = locale/en/reference/reference_lua/box_error.pot
+source_lang = en
+type = PO
+
+[tarantool-docs.reference--reference_lua--box_index]
+file_filter = locale/<lang>/LC_MESSAGES/reference/reference_lua/box_index.po
+source_file = locale/en/reference/reference_lua/box_index.pot
+source_lang = en
+type = PO
+
+[tarantool-docs.reference--reference_lua--box_info]
+file_filter = locale/<lang>/LC_MESSAGES/reference/reference_lua/box_info.po
+source_file = locale/en/reference/reference_lua/box_info.pot
+source_lang = en
+type = PO
+
+[tarantool-docs.reference--reference_lua--box_null]
+file_filter = locale/<lang>/LC_MESSAGES/reference/reference_lua/box_null.po
+source_file = locale/en/reference/reference_lua/box_null.pot
+source_lang = en
+type = PO
+
+[tarantool-docs.reference--reference_lua--box_once]
+file_filter = locale/<lang>/LC_MESSAGES/reference/reference_lua/box_once.po
+source_file = locale/en/reference/reference_lua/box_once.pot
+source_lang = en
+type = PO
+
+[tarantool-docs.reference--reference_lua--box_schema]
+file_filter = locale/<lang>/LC_MESSAGES/reference/reference_lua/box_schema.po
+source_file = locale/en/reference/reference_lua/box_schema.pot
+source_lang = en
+type = PO
+
+[tarantool-docs.reference--reference_lua--box_schema_sequence]
+file_filter = locale/<lang>/LC_MESSAGES/reference/reference_lua/box_schema_sequence.po
+source_file = locale/en/reference/reference_lua/box_schema_sequence.pot
+source_lang = en
+type = PO
+
+[tarantool-docs.reference--reference_lua--box_session]
+file_filter = locale/<lang>/LC_MESSAGES/reference/reference_lua/box_session.po
+source_file = locale/en/reference/reference_lua/box_session.pot
+source_lang = en
+type = PO
+
+[tarantool-docs.reference--reference_lua--box_slab]
+file_filter = locale/<lang>/LC_MESSAGES/reference/reference_lua/box_slab.po
+source_file = locale/en/reference/reference_lua/box_slab.pot
+source_lang = en
+type = PO
+
+[tarantool-docs.reference--reference_lua--box_snapshot]
+file_filter = locale/<lang>/LC_MESSAGES/reference/reference_lua/box_snapshot.po
+source_file = locale/en/reference/reference_lua/box_snapshot.pot
+source_lang = en
+type = PO
+
+[tarantool-docs.reference--reference_lua--box_space]
+file_filter = locale/<lang>/LC_MESSAGES/reference/reference_lua/box_space.po
+source_file = locale/en/reference/reference_lua/box_space.pot
+source_lang = en
+type = PO
+
+[tarantool-docs.reference--reference_lua--box_sql]
+file_filter = locale/<lang>/LC_MESSAGES/reference/reference_lua/box_sql.po
+source_file = locale/en/reference/reference_lua/box_sql.pot
+source_lang = en
+type = PO
+
+[tarantool-docs.reference--reference_lua--box_stat]
+file_filter = locale/<lang>/LC_MESSAGES/reference/reference_lua/box_stat.po
+source_file = locale/en/reference/reference_lua/box_stat.pot
+source_lang = en
+type = PO
+
+[tarantool-docs.reference--reference_lua--box_tuple]
+file_filter = locale/<lang>/LC_MESSAGES/reference/reference_lua/box_tuple.po
+source_file = locale/en/reference/reference_lua/box_tuple.pot
+source_lang = en
+type = PO
+
+[tarantool-docs.reference--reference_lua--box_txn_management]
+file_filter = locale/<lang>/LC_MESSAGES/reference/reference_lua/box_txn_management.po
+source_file = locale/en/reference/reference_lua/box_txn_management.pot
+source_lang = en
+type = PO
+
+[tarantool-docs.reference--reference_lua--buffer]
+file_filter = locale/<lang>/LC_MESSAGES/reference/reference_lua/buffer.po
+source_file = locale/en/reference/reference_lua/buffer.pot
+source_lang = en
+type = PO
+
+[tarantool-docs.reference--reference_lua--clock]
+file_filter = locale/<lang>/LC_MESSAGES/reference/reference_lua/clock.po
+source_file = locale/en/reference/reference_lua/clock.pot
+source_lang = en
+type = PO
+
+[tarantool-docs.reference--reference_lua--console]
+file_filter = locale/<lang>/LC_MESSAGES/reference/reference_lua/console.po
+source_file = locale/en/reference/reference_lua/console.pot
+source_lang = en
+type = PO
+
+[tarantool-docs.reference--reference_lua--crypto]
+file_filter = locale/<lang>/LC_MESSAGES/reference/reference_lua/crypto.po
+source_file = locale/en/reference/reference_lua/crypto.pot
+source_lang = en
+type = PO
+
+[tarantool-docs.reference--reference_lua--csv]
+file_filter = locale/<lang>/LC_MESSAGES/reference/reference_lua/csv.po
+source_file = locale/en/reference/reference_lua/csv.pot
+source_lang = en
+type = PO
+
+[tarantool-docs.reference--reference_lua--debug_facilities]
+file_filter = locale/<lang>/LC_MESSAGES/reference/reference_lua/debug_facilities.po
+source_file = locale/en/reference/reference_lua/debug_facilities.pot
+source_lang = en
+type = PO
+
+[tarantool-docs.reference--reference_lua--decimal]
+file_filter = locale/<lang>/LC_MESSAGES/reference/reference_lua/decimal.po
+source_file = locale/en/reference/reference_lua/decimal.pot
+source_lang = en
+type = PO
+
+[tarantool-docs.reference--reference_lua--digest]
+file_filter = locale/<lang>/LC_MESSAGES/reference/reference_lua/digest.po
+source_file = locale/en/reference/reference_lua/digest.pot
+source_lang = en
+type = PO
+
+[tarantool-docs.reference--reference_lua--errcodes]
+file_filter = locale/<lang>/LC_MESSAGES/reference/reference_lua/errcodes.po
+source_file = locale/en/reference/reference_lua/errcodes.pot
+source_lang = en
+type = PO
+
+[tarantool-docs.reference--reference_lua--errno]
+file_filter = locale/<lang>/LC_MESSAGES/reference/reference_lua/errno.po
+source_file = locale/en/reference/reference_lua/errno.pot
+source_lang = en
+type = PO
+
+[tarantool-docs.reference--reference_lua--fiber]
+file_filter = locale/<lang>/LC_MESSAGES/reference/reference_lua/fiber.po
+source_file = locale/en/reference/reference_lua/fiber.pot
+source_lang = en
+type = PO
+
+[tarantool-docs.reference--reference_lua--fio]
+file_filter = locale/<lang>/LC_MESSAGES/reference/reference_lua/fio.po
+source_file = locale/en/reference/reference_lua/fio.pot
+source_lang = en
+type = PO
+
+[tarantool-docs.reference--reference_lua--fun]
+file_filter = locale/<lang>/LC_MESSAGES/reference/reference_lua/fun.po
+source_file = locale/en/reference/reference_lua/fun.pot
+source_lang = en
+type = PO
+
+[tarantool-docs.reference--reference_lua--http]
+file_filter = locale/<lang>/LC_MESSAGES/reference/reference_lua/http.po
+source_file = locale/en/reference/reference_lua/http.pot
+source_lang = en
+type = PO
+
+[tarantool-docs.reference--reference_lua--iconv]
+file_filter = locale/<lang>/LC_MESSAGES/reference/reference_lua/iconv.po
+source_file = locale/en/reference/reference_lua/iconv.pot
+source_lang = en
+type = PO
+
+[tarantool-docs.reference--reference_lua--index]
+file_filter = locale/<lang>/LC_MESSAGES/reference/reference_lua/index.po
+source_file = locale/en/reference/reference_lua/index.pot
+source_lang = en
+type = PO
+
+[tarantool-docs.reference--reference_lua--json]
+file_filter = locale/<lang>/LC_MESSAGES/reference/reference_lua/json.po
+source_file = locale/en/reference/reference_lua/json.pot
+source_lang = en
+type = PO
+
+[tarantool-docs.reference--reference_lua--json_paths]
+file_filter = locale/<lang>/LC_MESSAGES/reference/reference_lua/json_paths.po
+source_file = locale/en/reference/reference_lua/json_paths.pot
+source_lang = en
+type = PO
+
+[tarantool-docs.reference--reference_lua--key_def]
+file_filter = locale/<lang>/LC_MESSAGES/reference/reference_lua/key_def.po
+source_file = locale/en/reference/reference_lua/key_def.pot
+source_lang = en
+type = PO
+
+[tarantool-docs.reference--reference_lua--log]
+file_filter = locale/<lang>/LC_MESSAGES/reference/reference_lua/log.po
+source_file = locale/en/reference/reference_lua/log.pot
+source_lang = en
+type = PO
+
+[tarantool-docs.reference--reference_lua--merger]
+file_filter = locale/<lang>/LC_MESSAGES/reference/reference_lua/merger.po
+source_file = locale/en/reference/reference_lua/merger.pot
+source_lang = en
+type = PO
+
+[tarantool-docs.reference--reference_lua--msgpack]
+file_filter = locale/<lang>/LC_MESSAGES/reference/reference_lua/msgpack.po
+source_file = locale/en/reference/reference_lua/msgpack.pot
+source_lang = en
+type = PO
+
+[tarantool-docs.reference--reference_lua--net_box]
+file_filter = locale/<lang>/LC_MESSAGES/reference/reference_lua/net_box.po
+source_file = locale/en/reference/reference_lua/net_box.pot
+source_lang = en
+type = PO
+
+[tarantool-docs.reference--reference_lua--osmodule]
+file_filter = locale/<lang>/LC_MESSAGES/reference/reference_lua/osmodule.po
+source_file = locale/en/reference/reference_lua/osmodule.pot
+source_lang = en
+type = PO
+
+[tarantool-docs.reference--reference_lua--other]
+file_filter = locale/<lang>/LC_MESSAGES/reference/reference_lua/other.po
+source_file = locale/en/reference/reference_lua/other.pot
+source_lang = en
+type = PO
+
+[tarantool-docs.reference--reference_lua--pickle]
+file_filter = locale/<lang>/LC_MESSAGES/reference/reference_lua/pickle.po
+source_file = locale/en/reference/reference_lua/pickle.pot
+source_lang = en
+type = PO
+
+[tarantool-docs.reference--reference_lua--popen]
+file_filter = locale/<lang>/LC_MESSAGES/reference/reference_lua/popen.po
+source_file = locale/en/reference/reference_lua/popen.pot
+source_lang = en
+type = PO
+
+[tarantool-docs.reference--reference_lua--socket]
+file_filter = locale/<lang>/LC_MESSAGES/reference/reference_lua/socket.po
+source_file = locale/en/reference/reference_lua/socket.pot
+source_lang = en
+type = PO
+
+[tarantool-docs.reference--reference_lua--strict]
+file_filter = locale/<lang>/LC_MESSAGES/reference/reference_lua/strict.po
+source_file = locale/en/reference/reference_lua/strict.pot
+source_lang = en
+type = PO
+
+[tarantool-docs.reference--reference_lua--string]
+file_filter = locale/<lang>/LC_MESSAGES/reference/reference_lua/string.po
+source_file = locale/en/reference/reference_lua/string.pot
+source_lang = en
+type = PO
+
+[tarantool-docs.reference--reference_lua--swim]
+file_filter = locale/<lang>/LC_MESSAGES/reference/reference_lua/swim.po
+source_file = locale/en/reference/reference_lua/swim.pot
+source_lang = en
+type = PO
+
+[tarantool-docs.reference--reference_lua--table]
+file_filter = locale/<lang>/LC_MESSAGES/reference/reference_lua/table.po
+source_file = locale/en/reference/reference_lua/table.pot
+source_lang = en
+type = PO
+
+[tarantool-docs.reference--reference_lua--tap]
+file_filter = locale/<lang>/LC_MESSAGES/reference/reference_lua/tap.po
+source_file = locale/en/reference/reference_lua/tap.pot
+source_lang = en
+type = PO
+
+[tarantool-docs.reference--reference_lua--tarantool]
+file_filter = locale/<lang>/LC_MESSAGES/reference/reference_lua/tarantool.po
+source_file = locale/en/reference/reference_lua/tarantool.pot
+source_lang = en
+type = PO
+
+[tarantool-docs.reference--reference_lua--uri]
+file_filter = locale/<lang>/LC_MESSAGES/reference/reference_lua/uri.po
+source_file = locale/en/reference/reference_lua/uri.pot
+source_lang = en
+type = PO
+
+[tarantool-docs.reference--reference_lua--utf8]
+file_filter = locale/<lang>/LC_MESSAGES/reference/reference_lua/utf8.po
+source_file = locale/en/reference/reference_lua/utf8.pot
+source_lang = en
+type = PO
+
+[tarantool-docs.reference--reference_lua--uuid]
+file_filter = locale/<lang>/LC_MESSAGES/reference/reference_lua/uuid.po
+source_file = locale/en/reference/reference_lua/uuid.pot
+source_lang = en
+type = PO
+
+[tarantool-docs.reference--reference_lua--xlog]
+file_filter = locale/<lang>/LC_MESSAGES/reference/reference_lua/xlog.po
+source_file = locale/en/reference/reference_lua/xlog.pot
+source_lang = en
+type = PO
+
+[tarantool-docs.reference--reference_lua--yaml]
+file_filter = locale/<lang>/LC_MESSAGES/reference/reference_lua/yaml.po
+source_file = locale/en/reference/reference_lua/yaml.pot
+source_lang = en
+type = PO
+
+[tarantool-docs.reference--reference_lua--box_backup--start]
+file_filter = locale/<lang>/LC_MESSAGES/reference/reference_lua/box_backup/start.po
+source_file = locale/en/reference/reference_lua/box_backup/start.pot
+source_lang = en
+type = PO
+
+[tarantool-docs.reference--reference_lua--box_backup--stop]
+file_filter = locale/<lang>/LC_MESSAGES/reference/reference_lua/box_backup/stop.po
+source_file = locale/en/reference/reference_lua/box_backup/stop.pot
+source_lang = en
+type = PO
+
+[tarantool-docs.reference--reference_lua--box_ctl--on_schema_init]
+file_filter = locale/<lang>/LC_MESSAGES/reference/reference_lua/box_ctl/on_schema_init.po
+source_file = locale/en/reference/reference_lua/box_ctl/on_schema_init.pot
+source_lang = en
+type = PO
+
+[tarantool-docs.reference--reference_lua--box_ctl--on_shutdown]
+file_filter = locale/<lang>/LC_MESSAGES/reference/reference_lua/box_ctl/on_shutdown.po
+source_file = locale/en/reference/reference_lua/box_ctl/on_shutdown.pot
+source_lang = en
+type = PO
+
+[tarantool-docs.reference--reference_lua--box_ctl--wait_ro]
+file_filter = locale/<lang>/LC_MESSAGES/reference/reference_lua/box_ctl/wait_ro.po
+source_file = locale/en/reference/reference_lua/box_ctl/wait_ro.pot
+source_lang = en
+type = PO
+
+[tarantool-docs.reference--reference_lua--box_ctl--wait_rw]
+file_filter = locale/<lang>/LC_MESSAGES/reference/reference_lua/box_ctl/wait_rw.po
+source_file = locale/en/reference/reference_lua/box_ctl/wait_rw.pot
+source_lang = en
+type = PO
+
+[tarantool-docs.reference--reference_lua--box_error--clear]
+file_filter = locale/<lang>/LC_MESSAGES/reference/reference_lua/box_error/clear.po
+source_file = locale/en/reference/reference_lua/box_error/clear.pot
+source_lang = en
+type = PO
+
+[tarantool-docs.reference--reference_lua--box_error--custom_type]
+file_filter = locale/<lang>/LC_MESSAGES/reference/reference_lua/box_error/custom_type.po
+source_file = locale/en/reference/reference_lua/box_error/custom_type.pot
+source_lang = en
+type = PO
+
+[tarantool-docs.reference--reference_lua--box_error--error]
+file_filter = locale/<lang>/LC_MESSAGES/reference/reference_lua/box_error/error.po
+source_file = locale/en/reference/reference_lua/box_error/error.pot
+source_lang = en
+type = PO
+
+[tarantool-docs.reference--reference_lua--box_error--error_object]
+file_filter = locale/<lang>/LC_MESSAGES/reference/reference_lua/box_error/error_object.po
+source_file = locale/en/reference/reference_lua/box_error/error_object.pot
+source_lang = en
+type = PO
+
+[tarantool-docs.reference--reference_lua--box_error--last]
+file_filter = locale/<lang>/LC_MESSAGES/reference/reference_lua/box_error/last.po
+source_file = locale/en/reference/reference_lua/box_error/last.pot
+source_lang = en
+type = PO
+
+[tarantool-docs.reference--reference_lua--box_error--new]
+file_filter = locale/<lang>/LC_MESSAGES/reference/reference_lua/box_error/new.po
+source_file = locale/en/reference/reference_lua/box_error/new.pot
+source_lang = en
+type = PO
+
+[tarantool-docs.reference--reference_lua--box_error--set]
+file_filter = locale/<lang>/LC_MESSAGES/reference/reference_lua/box_error/set.po
+source_file = locale/en/reference/reference_lua/box_error/set.pot
+source_lang = en
+type = PO
+
+[tarantool-docs.reference--reference_lua--box_index--alter]
+file_filter = locale/<lang>/LC_MESSAGES/reference/reference_lua/box_index/alter.po
+source_file = locale/en/reference/reference_lua/box_index/alter.pot
+source_lang = en
+type = PO
+
+[tarantool-docs.reference--reference_lua--box_index--bsize]
+file_filter = locale/<lang>/LC_MESSAGES/reference/reference_lua/box_index/bsize.po
+source_file = locale/en/reference/reference_lua/box_index/bsize.pot
+source_lang = en
+type = PO
+
+[tarantool-docs.reference--reference_lua--box_index--compact]
+file_filter = locale/<lang>/LC_MESSAGES/reference/reference_lua/box_index/compact.po
+source_file = locale/en/reference/reference_lua/box_index/compact.pot
+source_lang = en
+type = PO
+
+[tarantool-docs.reference--reference_lua--box_index--count]
+file_filter = locale/<lang>/LC_MESSAGES/reference/reference_lua/box_index/count.po
+source_file = locale/en/reference/reference_lua/box_index/count.pot
+source_lang = en
+type = PO
+
+[tarantool-docs.reference--reference_lua--box_index--delete]
+file_filter = locale/<lang>/LC_MESSAGES/reference/reference_lua/box_index/delete.po
+source_file = locale/en/reference/reference_lua/box_index/delete.pot
+source_lang = en
+type = PO
+
+[tarantool-docs.reference--reference_lua--box_index--drop]
+file_filter = locale/<lang>/LC_MESSAGES/reference/reference_lua/box_index/drop.po
+source_file = locale/en/reference/reference_lua/box_index/drop.pot
+source_lang = en
+type = PO
+
+[tarantool-docs.reference--reference_lua--box_index--examples]
+file_filter = locale/<lang>/LC_MESSAGES/reference/reference_lua/box_index/examples.po
+source_file = locale/en/reference/reference_lua/box_index/examples.pot
+source_lang = en
+type = PO
+
+[tarantool-docs.reference--reference_lua--box_index--get]
+file_filter = locale/<lang>/LC_MESSAGES/reference/reference_lua/box_index/get.po
+source_file = locale/en/reference/reference_lua/box_index/get.pot
+source_lang = en
+type = PO
+
+[tarantool-docs.reference--reference_lua--box_index--max]
+file_filter = locale/<lang>/LC_MESSAGES/reference/reference_lua/box_index/max.po
+source_file = locale/en/reference/reference_lua/box_index/max.pot
+source_lang = en
+type = PO
+
+[tarantool-docs.reference--reference_lua--box_index--min]
+file_filter = locale/<lang>/LC_MESSAGES/reference/reference_lua/box_index/min.po
+source_file = locale/en/reference/reference_lua/box_index/min.pot
+source_lang = en
+type = PO
+
+[tarantool-docs.reference--reference_lua--box_index--pairs]
+file_filter = locale/<lang>/LC_MESSAGES/reference/reference_lua/box_index/pairs.po
+source_file = locale/en/reference/reference_lua/box_index/pairs.pot
+source_lang = en
+type = PO
+
+[tarantool-docs.reference--reference_lua--box_index--parts]
+file_filter = locale/<lang>/LC_MESSAGES/reference/reference_lua/box_index/parts.po
+source_file = locale/en/reference/reference_lua/box_index/parts.pot
+source_lang = en
+type = PO
+
+[tarantool-docs.reference--reference_lua--box_index--random]
+file_filter = locale/<lang>/LC_MESSAGES/reference/reference_lua/box_index/random.po
+source_file = locale/en/reference/reference_lua/box_index/random.pot
+source_lang = en
+type = PO
+
+[tarantool-docs.reference--reference_lua--box_index--rename]
+file_filter = locale/<lang>/LC_MESSAGES/reference/reference_lua/box_index/rename.po
+source_file = locale/en/reference/reference_lua/box_index/rename.pot
+source_lang = en
+type = PO
+
+[tarantool-docs.reference--reference_lua--box_index--select]
+file_filter = locale/<lang>/LC_MESSAGES/reference/reference_lua/box_index/select.po
+source_file = locale/en/reference/reference_lua/box_index/select.pot
+source_lang = en
+type = PO
+
+[tarantool-docs.reference--reference_lua--box_index--stat]
+file_filter = locale/<lang>/LC_MESSAGES/reference/reference_lua/box_index/stat.po
+source_file = locale/en/reference/reference_lua/box_index/stat.pot
+source_lang = en
+type = PO
+
+[tarantool-docs.reference--reference_lua--box_index--type]
+file_filter = locale/<lang>/LC_MESSAGES/reference/reference_lua/box_index/type.po
+source_file = locale/en/reference/reference_lua/box_index/type.pot
+source_lang = en
+type = PO
+
+[tarantool-docs.reference--reference_lua--box_index--unique]
+file_filter = locale/<lang>/LC_MESSAGES/reference/reference_lua/box_index/unique.po
+source_file = locale/en/reference/reference_lua/box_index/unique.pot
+source_lang = en
+type = PO
+
+[tarantool-docs.reference--reference_lua--box_index--update]
+file_filter = locale/<lang>/LC_MESSAGES/reference/reference_lua/box_index/update.po
+source_file = locale/en/reference/reference_lua/box_index/update.pot
+source_lang = en
+type = PO
+
+[tarantool-docs.reference--reference_lua--box_index--user_defined]
+file_filter = locale/<lang>/LC_MESSAGES/reference/reference_lua/box_index/user_defined.po
+source_file = locale/en/reference/reference_lua/box_index/user_defined.pot
+source_lang = en
+type = PO
+
+[tarantool-docs.reference--reference_lua--box_info--election]
+file_filter = locale/<lang>/LC_MESSAGES/reference/reference_lua/box_info/election.po
+source_file = locale/en/reference/reference_lua/box_info/election.pot
+source_lang = en
+type = PO
+
+[tarantool-docs.reference--reference_lua--box_info--gc]
+file_filter = locale/<lang>/LC_MESSAGES/reference/reference_lua/box_info/gc.po
+source_file = locale/en/reference/reference_lua/box_info/gc.pot
+source_lang = en
+type = PO
+
+[tarantool-docs.reference--reference_lua--box_info--info]
+file_filter = locale/<lang>/LC_MESSAGES/reference/reference_lua/box_info/info.po
+source_file = locale/en/reference/reference_lua/box_info/info.pot
+source_lang = en
+type = PO
+
+[tarantool-docs.reference--reference_lua--box_info--listen]
+file_filter = locale/<lang>/LC_MESSAGES/reference/reference_lua/box_info/listen.po
+source_file = locale/en/reference/reference_lua/box_info/listen.pot
+source_lang = en
+type = PO
+
+[tarantool-docs.reference--reference_lua--box_info--memory]
+file_filter = locale/<lang>/LC_MESSAGES/reference/reference_lua/box_info/memory.po
+source_file = locale/en/reference/reference_lua/box_info/memory.pot
+source_lang = en
+type = PO
+
+[tarantool-docs.reference--reference_lua--box_info--replication]
+file_filter = locale/<lang>/LC_MESSAGES/reference/reference_lua/box_info/replication.po
+source_file = locale/en/reference/reference_lua/box_info/replication.pot
+source_lang = en
+type = PO
+
+[tarantool-docs.reference--reference_lua--box_info--replication_anon]
+file_filter = locale/<lang>/LC_MESSAGES/reference/reference_lua/box_info/replication_anon.po
+source_file = locale/en/reference/reference_lua/box_info/replication_anon.pot
+source_lang = en
+type = PO
+
+[tarantool-docs.reference--reference_lua--box_schema--func_create]
+file_filter = locale/<lang>/LC_MESSAGES/reference/reference_lua/box_schema/func_create.po
+source_file = locale/en/reference/reference_lua/box_schema/func_create.pot
+source_lang = en
+type = PO
+
+[tarantool-docs.reference--reference_lua--box_schema--func_drop]
+file_filter = locale/<lang>/LC_MESSAGES/reference/reference_lua/box_schema/func_drop.po
+source_file = locale/en/reference/reference_lua/box_schema/func_drop.pot
+source_lang = en
+type = PO
+
+[tarantool-docs.reference--reference_lua--box_schema--func_exists]
+file_filter = locale/<lang>/LC_MESSAGES/reference/reference_lua/box_schema/func_exists.po
+source_file = locale/en/reference/reference_lua/box_schema/func_exists.pot
+source_lang = en
+type = PO
+
+[tarantool-docs.reference--reference_lua--box_schema--func_reload]
+file_filter = locale/<lang>/LC_MESSAGES/reference/reference_lua/box_schema/func_reload.po
+source_file = locale/en/reference/reference_lua/box_schema/func_reload.pot
+source_lang = en
+type = PO
+
+[tarantool-docs.reference--reference_lua--box_schema--role_create]
+file_filter = locale/<lang>/LC_MESSAGES/reference/reference_lua/box_schema/role_create.po
+source_file = locale/en/reference/reference_lua/box_schema/role_create.pot
+source_lang = en
+type = PO
+
+[tarantool-docs.reference--reference_lua--box_schema--role_drop]
+file_filter = locale/<lang>/LC_MESSAGES/reference/reference_lua/box_schema/role_drop.po
+source_file = locale/en/reference/reference_lua/box_schema/role_drop.pot
+source_lang = en
+type = PO
+
+[tarantool-docs.reference--reference_lua--box_schema--role_exists]
+file_filter = locale/<lang>/LC_MESSAGES/reference/reference_lua/box_schema/role_exists.po
+source_file = locale/en/reference/reference_lua/box_schema/role_exists.pot
+source_lang = en
+type = PO
+
+[tarantool-docs.reference--reference_lua--box_schema--role_grant]
+file_filter = locale/<lang>/LC_MESSAGES/reference/reference_lua/box_schema/role_grant.po
+source_file = locale/en/reference/reference_lua/box_schema/role_grant.pot
+source_lang = en
+type = PO
+
+[tarantool-docs.reference--reference_lua--box_schema--role_info]
+file_filter = locale/<lang>/LC_MESSAGES/reference/reference_lua/box_schema/role_info.po
+source_file = locale/en/reference/reference_lua/box_schema/role_info.pot
+source_lang = en
+type = PO
+
+[tarantool-docs.reference--reference_lua--box_schema--role_revoke]
+file_filter = locale/<lang>/LC_MESSAGES/reference/reference_lua/box_schema/role_revoke.po
+source_file = locale/en/reference/reference_lua/box_schema/role_revoke.pot
+source_lang = en
+type = PO
+
+[tarantool-docs.reference--reference_lua--box_schema--space_create]
+file_filter = locale/<lang>/LC_MESSAGES/reference/reference_lua/box_schema/space_create.po
+source_file = locale/en/reference/reference_lua/box_schema/space_create.pot
+source_lang = en
+type = PO
+
+[tarantool-docs.reference--reference_lua--box_schema--upgrade]
+file_filter = locale/<lang>/LC_MESSAGES/reference/reference_lua/box_schema/upgrade.po
+source_file = locale/en/reference/reference_lua/box_schema/upgrade.pot
+source_lang = en
+type = PO
+
+[tarantool-docs.reference--reference_lua--box_schema--user_create]
+file_filter = locale/<lang>/LC_MESSAGES/reference/reference_lua/box_schema/user_create.po
+source_file = locale/en/reference/reference_lua/box_schema/user_create.pot
+source_lang = en
+type = PO
+
+[tarantool-docs.reference--reference_lua--box_schema--user_drop]
+file_filter = locale/<lang>/LC_MESSAGES/reference/reference_lua/box_schema/user_drop.po
+source_file = locale/en/reference/reference_lua/box_schema/user_drop.pot
+source_lang = en
+type = PO
+
+[tarantool-docs.reference--reference_lua--box_schema--user_exists]
+file_filter = locale/<lang>/LC_MESSAGES/reference/reference_lua/box_schema/user_exists.po
+source_file = locale/en/reference/reference_lua/box_schema/user_exists.pot
+source_lang = en
+type = PO
+
+[tarantool-docs.reference--reference_lua--box_schema--user_grant]
+file_filter = locale/<lang>/LC_MESSAGES/reference/reference_lua/box_schema/user_grant.po
+source_file = locale/en/reference/reference_lua/box_schema/user_grant.pot
+source_lang = en
+type = PO
+
+[tarantool-docs.reference--reference_lua--box_schema--user_info]
+file_filter = locale/<lang>/LC_MESSAGES/reference/reference_lua/box_schema/user_info.po
+source_file = locale/en/reference/reference_lua/box_schema/user_info.pot
+source_lang = en
+type = PO
+
+[tarantool-docs.reference--reference_lua--box_schema--user_passwd]
+file_filter = locale/<lang>/LC_MESSAGES/reference/reference_lua/box_schema/user_passwd.po
+source_file = locale/en/reference/reference_lua/box_schema/user_passwd.pot
+source_lang = en
+type = PO
+
+[tarantool-docs.reference--reference_lua--box_schema--user_password]
+file_filter = locale/<lang>/LC_MESSAGES/reference/reference_lua/box_schema/user_password.po
+source_file = locale/en/reference/reference_lua/box_schema/user_password.pot
+source_lang = en
+type = PO
+
+[tarantool-docs.reference--reference_lua--box_schema--user_revoke]
+file_filter = locale/<lang>/LC_MESSAGES/reference/reference_lua/box_schema/user_revoke.po
+source_file = locale/en/reference/reference_lua/box_schema/user_revoke.pot
+source_lang = en
+type = PO
+
+[tarantool-docs.reference--reference_lua--box_schema_sequence--alter]
+file_filter = locale/<lang>/LC_MESSAGES/reference/reference_lua/box_schema_sequence/alter.po
+source_file = locale/en/reference/reference_lua/box_schema_sequence/alter.pot
+source_lang = en
+type = PO
+
+[tarantool-docs.reference--reference_lua--box_schema_sequence--create]
+file_filter = locale/<lang>/LC_MESSAGES/reference/reference_lua/box_schema_sequence/create.po
+source_file = locale/en/reference/reference_lua/box_schema_sequence/create.pot
+source_lang = en
+type = PO
+
+[tarantool-docs.reference--reference_lua--box_schema_sequence--create_index]
+file_filter = locale/<lang>/LC_MESSAGES/reference/reference_lua/box_schema_sequence/create_index.po
+source_file = locale/en/reference/reference_lua/box_schema_sequence/create_index.pot
+source_lang = en
+type = PO
+
+[tarantool-docs.reference--reference_lua--box_schema_sequence--current]
+file_filter = locale/<lang>/LC_MESSAGES/reference/reference_lua/box_schema_sequence/current.po
+source_file = locale/en/reference/reference_lua/box_schema_sequence/current.pot
+source_lang = en
+type = PO
+
+[tarantool-docs.reference--reference_lua--box_schema_sequence--drop]
+file_filter = locale/<lang>/LC_MESSAGES/reference/reference_lua/box_schema_sequence/drop.po
+source_file = locale/en/reference/reference_lua/box_schema_sequence/drop.pot
+source_lang = en
+type = PO
+
+[tarantool-docs.reference--reference_lua--box_schema_sequence--next]
+file_filter = locale/<lang>/LC_MESSAGES/reference/reference_lua/box_schema_sequence/next.po
+source_file = locale/en/reference/reference_lua/box_schema_sequence/next.pot
+source_lang = en
+type = PO
+
+[tarantool-docs.reference--reference_lua--box_schema_sequence--reset]
+file_filter = locale/<lang>/LC_MESSAGES/reference/reference_lua/box_schema_sequence/reset.po
+source_file = locale/en/reference/reference_lua/box_schema_sequence/reset.pot
+source_lang = en
+type = PO
+
+[tarantool-docs.reference--reference_lua--box_schema_sequence--set]
+file_filter = locale/<lang>/LC_MESSAGES/reference/reference_lua/box_schema_sequence/set.po
+source_file = locale/en/reference/reference_lua/box_schema_sequence/set.pot
+source_lang = en
+type = PO
+
+[tarantool-docs.reference--reference_lua--box_session--euid]
+file_filter = locale/<lang>/LC_MESSAGES/reference/reference_lua/box_session/euid.po
+source_file = locale/en/reference/reference_lua/box_session/euid.pot
+source_lang = en
+type = PO
+
+[tarantool-docs.reference--reference_lua--box_session--exists]
+file_filter = locale/<lang>/LC_MESSAGES/reference/reference_lua/box_session/exists.po
+source_file = locale/en/reference/reference_lua/box_session/exists.pot
+source_lang = en
+type = PO
+
+[tarantool-docs.reference--reference_lua--box_session--id]
+file_filter = locale/<lang>/LC_MESSAGES/reference/reference_lua/box_session/id.po
+source_file = locale/en/reference/reference_lua/box_session/id.pot
+source_lang = en
+type = PO
+
+[tarantool-docs.reference--reference_lua--box_session--on_access_denied]
+file_filter = locale/<lang>/LC_MESSAGES/reference/reference_lua/box_session/on_access_denied.po
+source_file = locale/en/reference/reference_lua/box_session/on_access_denied.pot
+source_lang = en
+type = PO
+
+[tarantool-docs.reference--reference_lua--box_session--on_auth]
+file_filter = locale/<lang>/LC_MESSAGES/reference/reference_lua/box_session/on_auth.po
+source_file = locale/en/reference/reference_lua/box_session/on_auth.pot
+source_lang = en
+type = PO
+
+[tarantool-docs.reference--reference_lua--box_session--on_connect]
+file_filter = locale/<lang>/LC_MESSAGES/reference/reference_lua/box_session/on_connect.po
+source_file = locale/en/reference/reference_lua/box_session/on_connect.pot
+source_lang = en
+type = PO
+
+[tarantool-docs.reference--reference_lua--box_session--on_disconnect]
+file_filter = locale/<lang>/LC_MESSAGES/reference/reference_lua/box_session/on_disconnect.po
+source_file = locale/en/reference/reference_lua/box_session/on_disconnect.pot
+source_lang = en
+type = PO
+
+[tarantool-docs.reference--reference_lua--box_session--peer]
+file_filter = locale/<lang>/LC_MESSAGES/reference/reference_lua/box_session/peer.po
+source_file = locale/en/reference/reference_lua/box_session/peer.pot
+source_lang = en
+type = PO
+
+[tarantool-docs.reference--reference_lua--box_session--push]
+file_filter = locale/<lang>/LC_MESSAGES/reference/reference_lua/box_session/push.po
+source_file = locale/en/reference/reference_lua/box_session/push.pot
+source_lang = en
+type = PO
+
+[tarantool-docs.reference--reference_lua--box_session--storage]
+file_filter = locale/<lang>/LC_MESSAGES/reference/reference_lua/box_session/storage.po
+source_file = locale/en/reference/reference_lua/box_session/storage.pot
+source_lang = en
+type = PO
+
+[tarantool-docs.reference--reference_lua--box_session--su]
+file_filter = locale/<lang>/LC_MESSAGES/reference/reference_lua/box_session/su.po
+source_file = locale/en/reference/reference_lua/box_session/su.pot
+source_lang = en
+type = PO
+
+[tarantool-docs.reference--reference_lua--box_session--sync]
+file_filter = locale/<lang>/LC_MESSAGES/reference/reference_lua/box_session/sync.po
+source_file = locale/en/reference/reference_lua/box_session/sync.pot
+source_lang = en
+type = PO
+
+[tarantool-docs.reference--reference_lua--box_session--type]
+file_filter = locale/<lang>/LC_MESSAGES/reference/reference_lua/box_session/type.po
+source_file = locale/en/reference/reference_lua/box_session/type.pot
+source_lang = en
+type = PO
+
+[tarantool-docs.reference--reference_lua--box_session--uid]
+file_filter = locale/<lang>/LC_MESSAGES/reference/reference_lua/box_session/uid.po
+source_file = locale/en/reference/reference_lua/box_session/uid.pot
+source_lang = en
+type = PO
+
+[tarantool-docs.reference--reference_lua--box_session--user]
+file_filter = locale/<lang>/LC_MESSAGES/reference/reference_lua/box_session/user.po
+source_file = locale/en/reference/reference_lua/box_session/user.pot
+source_lang = en
+type = PO
+
+[tarantool-docs.reference--reference_lua--box_slab--runtime_info]
+file_filter = locale/<lang>/LC_MESSAGES/reference/reference_lua/box_slab/runtime_info.po
+source_file = locale/en/reference/reference_lua/box_slab/runtime_info.pot
+source_lang = en
+type = PO
+
+[tarantool-docs.reference--reference_lua--box_slab--slab_info]
+file_filter = locale/<lang>/LC_MESSAGES/reference/reference_lua/box_slab/slab_info.po
+source_file = locale/en/reference/reference_lua/box_slab/slab_info.pot
+source_lang = en
+type = PO
+
+[tarantool-docs.reference--reference_lua--box_slab--slab_stats]
+file_filter = locale/<lang>/LC_MESSAGES/reference/reference_lua/box_slab/slab_stats.po
+source_file = locale/en/reference/reference_lua/box_slab/slab_stats.pot
+source_lang = en
+type = PO
+
+[tarantool-docs.reference--reference_lua--box_space--_ck_constraint]
+file_filter = locale/<lang>/LC_MESSAGES/reference/reference_lua/box_space/_ck_constraint.po
+source_file = locale/en/reference/reference_lua/box_space/_ck_constraint.pot
+source_lang = en
+type = PO
+
+[tarantool-docs.reference--reference_lua--box_space--_cluster]
+file_filter = locale/<lang>/LC_MESSAGES/reference/reference_lua/box_space/_cluster.po
+source_file = locale/en/reference/reference_lua/box_space/_cluster.pot
+source_lang = en
+type = PO
+
+[tarantool-docs.reference--reference_lua--box_space--_collation]
+file_filter = locale/<lang>/LC_MESSAGES/reference/reference_lua/box_space/_collation.po
+source_file = locale/en/reference/reference_lua/box_space/_collation.pot
+source_lang = en
+type = PO
+
+[tarantool-docs.reference--reference_lua--box_space--_func]
+file_filter = locale/<lang>/LC_MESSAGES/reference/reference_lua/box_space/_func.po
+source_file = locale/en/reference/reference_lua/box_space/_func.pot
+source_lang = en
+type = PO
+
+[tarantool-docs.reference--reference_lua--box_space--_index]
+file_filter = locale/<lang>/LC_MESSAGES/reference/reference_lua/box_space/_index.po
+source_file = locale/en/reference/reference_lua/box_space/_index.pot
+source_lang = en
+type = PO
+
+[tarantool-docs.reference--reference_lua--box_space--_priv]
+file_filter = locale/<lang>/LC_MESSAGES/reference/reference_lua/box_space/_priv.po
+source_file = locale/en/reference/reference_lua/box_space/_priv.pot
+source_lang = en
+type = PO
+
+[tarantool-docs.reference--reference_lua--box_space--_schema]
+file_filter = locale/<lang>/LC_MESSAGES/reference/reference_lua/box_space/_schema.po
+source_file = locale/en/reference/reference_lua/box_space/_schema.pot
+source_lang = en
+type = PO
+
+[tarantool-docs.reference--reference_lua--box_space--_sequence]
+file_filter = locale/<lang>/LC_MESSAGES/reference/reference_lua/box_space/_sequence.po
+source_file = locale/en/reference/reference_lua/box_space/_sequence.pot
+source_lang = en
+type = PO
+
+[tarantool-docs.reference--reference_lua--box_space--_sequence_data]
+file_filter = locale/<lang>/LC_MESSAGES/reference/reference_lua/box_space/_sequence_data.po
+source_file = locale/en/reference/reference_lua/box_space/_sequence_data.pot
+source_lang = en
+type = PO
+
+[tarantool-docs.reference--reference_lua--box_space--_session_settings]
+file_filter = locale/<lang>/LC_MESSAGES/reference/reference_lua/box_space/_session_settings.po
+source_file = locale/en/reference/reference_lua/box_space/_session_settings.pot
+source_lang = en
+type = PO
+
+[tarantool-docs.reference--reference_lua--box_space--_space]
+file_filter = locale/<lang>/LC_MESSAGES/reference/reference_lua/box_space/_space.po
+source_file = locale/en/reference/reference_lua/box_space/_space.pot
+source_lang = en
+type = PO
+
+[tarantool-docs.reference--reference_lua--box_space--_user]
+file_filter = locale/<lang>/LC_MESSAGES/reference/reference_lua/box_space/_user.po
+source_file = locale/en/reference/reference_lua/box_space/_user.pot
+source_lang = en
+type = PO
+
+[tarantool-docs.reference--reference_lua--box_space--_vcollation]
+file_filter = locale/<lang>/LC_MESSAGES/reference/reference_lua/box_space/_vcollation.po
+source_file = locale/en/reference/reference_lua/box_space/_vcollation.pot
+source_lang = en
+type = PO
+
+[tarantool-docs.reference--reference_lua--box_space--_vindex]
+file_filter = locale/<lang>/LC_MESSAGES/reference/reference_lua/box_space/_vindex.po
+source_file = locale/en/reference/reference_lua/box_space/_vindex.pot
+source_lang = en
+type = PO
+
+[tarantool-docs.reference--reference_lua--box_space--_vpriv]
+file_filter = locale/<lang>/LC_MESSAGES/reference/reference_lua/box_space/_vpriv.po
+source_file = locale/en/reference/reference_lua/box_space/_vpriv.pot
+source_lang = en
+type = PO
+
+[tarantool-docs.reference--reference_lua--box_space--_vspace]
+file_filter = locale/<lang>/LC_MESSAGES/reference/reference_lua/box_space/_vspace.po
+source_file = locale/en/reference/reference_lua/box_space/_vspace.pot
+source_lang = en
+type = PO
+
+[tarantool-docs.reference--reference_lua--box_space--_vuser]
+file_filter = locale/<lang>/LC_MESSAGES/reference/reference_lua/box_space/_vuser.po
+source_file = locale/en/reference/reference_lua/box_space/_vuser.pot
+source_lang = en
+type = PO
+
+[tarantool-docs.reference--reference_lua--box_space--alter]
+file_filter = locale/<lang>/LC_MESSAGES/reference/reference_lua/box_space/alter.po
+source_file = locale/en/reference/reference_lua/box_space/alter.pot
+source_lang = en
+type = PO
+
+[tarantool-docs.reference--reference_lua--box_space--auto_increment]
+file_filter = locale/<lang>/LC_MESSAGES/reference/reference_lua/box_space/auto_increment.po
+source_file = locale/en/reference/reference_lua/box_space/auto_increment.pot
+source_lang = en
+type = PO
+
+[tarantool-docs.reference--reference_lua--box_space--before_replace]
+file_filter = locale/<lang>/LC_MESSAGES/reference/reference_lua/box_space/before_replace.po
+source_file = locale/en/reference/reference_lua/box_space/before_replace.pot
+source_lang = en
+type = PO
+
+[tarantool-docs.reference--reference_lua--box_space--bsize]
+file_filter = locale/<lang>/LC_MESSAGES/reference/reference_lua/box_space/bsize.po
+source_file = locale/en/reference/reference_lua/box_space/bsize.pot
+source_lang = en
+type = PO
+
+[tarantool-docs.reference--reference_lua--box_space--count]
+file_filter = locale/<lang>/LC_MESSAGES/reference/reference_lua/box_space/count.po
+source_file = locale/en/reference/reference_lua/box_space/count.pot
+source_lang = en
+type = PO
+
+[tarantool-docs.reference--reference_lua--box_space--create_check_constraint]
+file_filter = locale/<lang>/LC_MESSAGES/reference/reference_lua/box_space/create_check_constraint.po
+source_file = locale/en/reference/reference_lua/box_space/create_check_constraint.pot
+source_lang = en
+type = PO
+
+[tarantool-docs.reference--reference_lua--box_space--create_index]
+file_filter = locale/<lang>/LC_MESSAGES/reference/reference_lua/box_space/create_index.po
+source_file = locale/en/reference/reference_lua/box_space/create_index.pot
+source_lang = en
+type = PO
+
+[tarantool-docs.reference--reference_lua--box_space--delete]
+file_filter = locale/<lang>/LC_MESSAGES/reference/reference_lua/box_space/delete.po
+source_file = locale/en/reference/reference_lua/box_space/delete.pot
+source_lang = en
+type = PO
+
+[tarantool-docs.reference--reference_lua--box_space--drop]
+file_filter = locale/<lang>/LC_MESSAGES/reference/reference_lua/box_space/drop.po
+source_file = locale/en/reference/reference_lua/box_space/drop.pot
+source_lang = en
+type = PO
+
+[tarantool-docs.reference--reference_lua--box_space--enabled]
+file_filter = locale/<lang>/LC_MESSAGES/reference/reference_lua/box_space/enabled.po
+source_file = locale/en/reference/reference_lua/box_space/enabled.pot
+source_lang = en
+type = PO
+
+[tarantool-docs.reference--reference_lua--box_space--examples]
+file_filter = locale/<lang>/LC_MESSAGES/reference/reference_lua/box_space/examples.po
+source_file = locale/en/reference/reference_lua/box_space/examples.pot
+source_lang = en
+type = PO
+
+[tarantool-docs.reference--reference_lua--box_space--field_count]
+file_filter = locale/<lang>/LC_MESSAGES/reference/reference_lua/box_space/field_count.po
+source_file = locale/en/reference/reference_lua/box_space/field_count.pot
+source_lang = en
+type = PO
+
+[tarantool-docs.reference--reference_lua--box_space--format]
+file_filter = locale/<lang>/LC_MESSAGES/reference/reference_lua/box_space/format.po
+source_file = locale/en/reference/reference_lua/box_space/format.pot
+source_lang = en
+type = PO
+
+[tarantool-docs.reference--reference_lua--box_space--frommap]
+file_filter = locale/<lang>/LC_MESSAGES/reference/reference_lua/box_space/frommap.po
+source_file = locale/en/reference/reference_lua/box_space/frommap.pot
+source_lang = en
+type = PO
+
+[tarantool-docs.reference--reference_lua--box_space--get]
+file_filter = locale/<lang>/LC_MESSAGES/reference/reference_lua/box_space/get.po
+source_file = locale/en/reference/reference_lua/box_space/get.pot
+source_lang = en
+type = PO
+
+[tarantool-docs.reference--reference_lua--box_space--id]
+file_filter = locale/<lang>/LC_MESSAGES/reference/reference_lua/box_space/id.po
+source_file = locale/en/reference/reference_lua/box_space/id.pot
+source_lang = en
+type = PO
+
+[tarantool-docs.reference--reference_lua--box_space--index_data]
+file_filter = locale/<lang>/LC_MESSAGES/reference/reference_lua/box_space/index_data.po
+source_file = locale/en/reference/reference_lua/box_space/index_data.pot
+source_lang = en
+type = PO
+
+[tarantool-docs.reference--reference_lua--box_space--insert]
+file_filter = locale/<lang>/LC_MESSAGES/reference/reference_lua/box_space/insert.po
+source_file = locale/en/reference/reference_lua/box_space/insert.pot
+source_lang = en
+type = PO
+
+[tarantool-docs.reference--reference_lua--box_space--len]
+file_filter = locale/<lang>/LC_MESSAGES/reference/reference_lua/box_space/len.po
+source_file = locale/en/reference/reference_lua/box_space/len.pot
+source_lang = en
+type = PO
+
+[tarantool-docs.reference--reference_lua--box_space--on_replace]
+file_filter = locale/<lang>/LC_MESSAGES/reference/reference_lua/box_space/on_replace.po
+source_file = locale/en/reference/reference_lua/box_space/on_replace.pot
+source_lang = en
+type = PO
+
+[tarantool-docs.reference--reference_lua--box_space--pairs]
+file_filter = locale/<lang>/LC_MESSAGES/reference/reference_lua/box_space/pairs.po
+source_file = locale/en/reference/reference_lua/box_space/pairs.pot
+source_lang = en
+type = PO
+
+[tarantool-docs.reference--reference_lua--box_space--put]
+file_filter = locale/<lang>/LC_MESSAGES/reference/reference_lua/box_space/put.po
+source_file = locale/en/reference/reference_lua/box_space/put.pot
+source_lang = en
+type = PO
+
+[tarantool-docs.reference--reference_lua--box_space--rename]
+file_filter = locale/<lang>/LC_MESSAGES/reference/reference_lua/box_space/rename.po
+source_file = locale/en/reference/reference_lua/box_space/rename.pot
+source_lang = en
+type = PO
+
+[tarantool-docs.reference--reference_lua--box_space--replace]
+file_filter = locale/<lang>/LC_MESSAGES/reference/reference_lua/box_space/replace.po
+source_file = locale/en/reference/reference_lua/box_space/replace.pot
+source_lang = en
+type = PO
+
+[tarantool-docs.reference--reference_lua--box_space--run_triggers]
+file_filter = locale/<lang>/LC_MESSAGES/reference/reference_lua/box_space/run_triggers.po
+source_file = locale/en/reference/reference_lua/box_space/run_triggers.pot
+source_lang = en
+type = PO
+
+[tarantool-docs.reference--reference_lua--box_space--select]
+file_filter = locale/<lang>/LC_MESSAGES/reference/reference_lua/box_space/select.po
+source_file = locale/en/reference/reference_lua/box_space/select.pot
+source_lang = en
+type = PO
+
+[tarantool-docs.reference--reference_lua--box_space--truncate]
+file_filter = locale/<lang>/LC_MESSAGES/reference/reference_lua/box_space/truncate.po
+source_file = locale/en/reference/reference_lua/box_space/truncate.pot
+source_lang = en
+type = PO
+
+[tarantool-docs.reference--reference_lua--box_space--update]
+file_filter = locale/<lang>/LC_MESSAGES/reference/reference_lua/box_space/update.po
+source_file = locale/en/reference/reference_lua/box_space/update.pot
+source_lang = en
+type = PO
+
+[tarantool-docs.reference--reference_lua--box_space--upsert]
+file_filter = locale/<lang>/LC_MESSAGES/reference/reference_lua/box_space/upsert.po
+source_file = locale/en/reference/reference_lua/box_space/upsert.pot
+source_lang = en
+type = PO
+
+[tarantool-docs.reference--reference_lua--box_space--user_defined]
+file_filter = locale/<lang>/LC_MESSAGES/reference/reference_lua/box_space/user_defined.po
+source_file = locale/en/reference/reference_lua/box_space/user_defined.pot
+source_lang = en
+type = PO
+
+[tarantool-docs.reference--reference_lua--box_sql--execute]
+file_filter = locale/<lang>/LC_MESSAGES/reference/reference_lua/box_sql/execute.po
+source_file = locale/en/reference/reference_lua/box_sql/execute.pot
+source_lang = en
+type = PO
+
+[tarantool-docs.reference--reference_lua--box_sql--prepare]
+file_filter = locale/<lang>/LC_MESSAGES/reference/reference_lua/box_sql/prepare.po
+source_file = locale/en/reference/reference_lua/box_sql/prepare.pot
+source_lang = en
+type = PO
+
+[tarantool-docs.reference--reference_lua--box_sql--prepared_table]
+file_filter = locale/<lang>/LC_MESSAGES/reference/reference_lua/box_sql/prepared_table.po
+source_file = locale/en/reference/reference_lua/box_sql/prepared_table.pot
+source_lang = en
+type = PO
+
+[tarantool-docs.reference--reference_lua--box_tuple--bsize]
+file_filter = locale/<lang>/LC_MESSAGES/reference/reference_lua/box_tuple/bsize.po
+source_file = locale/en/reference/reference_lua/box_tuple/bsize.pot
+source_lang = en
+type = PO
+
+[tarantool-docs.reference--reference_lua--box_tuple--count_fields]
+file_filter = locale/<lang>/LC_MESSAGES/reference/reference_lua/box_tuple/count_fields.po
+source_file = locale/en/reference/reference_lua/box_tuple/count_fields.pot
+source_lang = en
+type = PO
+
+[tarantool-docs.reference--reference_lua--box_tuple--field_name]
+file_filter = locale/<lang>/LC_MESSAGES/reference/reference_lua/box_tuple/field_name.po
+source_file = locale/en/reference/reference_lua/box_tuple/field_name.pot
+source_lang = en
+type = PO
+
+[tarantool-docs.reference--reference_lua--box_tuple--field_number]
+file_filter = locale/<lang>/LC_MESSAGES/reference/reference_lua/box_tuple/field_number.po
+source_file = locale/en/reference/reference_lua/box_tuple/field_number.pot
+source_lang = en
+type = PO
+
+[tarantool-docs.reference--reference_lua--box_tuple--field_path]
+file_filter = locale/<lang>/LC_MESSAGES/reference/reference_lua/box_tuple/field_path.po
+source_file = locale/en/reference/reference_lua/box_tuple/field_path.pot
+source_lang = en
+type = PO
+
+[tarantool-docs.reference--reference_lua--box_tuple--find]
+file_filter = locale/<lang>/LC_MESSAGES/reference/reference_lua/box_tuple/find.po
+source_file = locale/en/reference/reference_lua/box_tuple/find.pot
+source_lang = en
+type = PO
+
+[tarantool-docs.reference--reference_lua--box_tuple--is]
+file_filter = locale/<lang>/LC_MESSAGES/reference/reference_lua/box_tuple/is.po
+source_file = locale/en/reference/reference_lua/box_tuple/is.pot
+source_lang = en
+type = PO
+
+[tarantool-docs.reference--reference_lua--box_tuple--new]
+file_filter = locale/<lang>/LC_MESSAGES/reference/reference_lua/box_tuple/new.po
+source_file = locale/en/reference/reference_lua/box_tuple/new.pot
+source_lang = en
+type = PO
+
+[tarantool-docs.reference--reference_lua--box_tuple--next]
+file_filter = locale/<lang>/LC_MESSAGES/reference/reference_lua/box_tuple/next.po
+source_file = locale/en/reference/reference_lua/box_tuple/next.pot
+source_lang = en
+type = PO
+
+[tarantool-docs.reference--reference_lua--box_tuple--pairs]
+file_filter = locale/<lang>/LC_MESSAGES/reference/reference_lua/box_tuple/pairs.po
+source_file = locale/en/reference/reference_lua/box_tuple/pairs.pot
+source_lang = en
+type = PO
+
+[tarantool-docs.reference--reference_lua--box_tuple--tomap]
+file_filter = locale/<lang>/LC_MESSAGES/reference/reference_lua/box_tuple/tomap.po
+source_file = locale/en/reference/reference_lua/box_tuple/tomap.pot
+source_lang = en
+type = PO
+
+[tarantool-docs.reference--reference_lua--box_tuple--totable]
+file_filter = locale/<lang>/LC_MESSAGES/reference/reference_lua/box_tuple/totable.po
+source_file = locale/en/reference/reference_lua/box_tuple/totable.pot
+source_lang = en
+type = PO
+
+[tarantool-docs.reference--reference_lua--box_tuple--transform]
+file_filter = locale/<lang>/LC_MESSAGES/reference/reference_lua/box_tuple/transform.po
+source_file = locale/en/reference/reference_lua/box_tuple/transform.pot
+source_lang = en
+type = PO
+
+[tarantool-docs.reference--reference_lua--box_tuple--unpack]
+file_filter = locale/<lang>/LC_MESSAGES/reference/reference_lua/box_tuple/unpack.po
+source_file = locale/en/reference/reference_lua/box_tuple/unpack.pot
+source_lang = en
+type = PO
+
+[tarantool-docs.reference--reference_lua--box_tuple--update]
+file_filter = locale/<lang>/LC_MESSAGES/reference/reference_lua/box_tuple/update.po
+source_file = locale/en/reference/reference_lua/box_tuple/update.pot
+source_lang = en
+type = PO
+
+[tarantool-docs.reference--reference_lua--box_tuple--upsert]
+file_filter = locale/<lang>/LC_MESSAGES/reference/reference_lua/box_tuple/upsert.po
+source_file = locale/en/reference/reference_lua/box_tuple/upsert.pot
+source_lang = en
+type = PO
+
+[tarantool-docs.reference--reference_lua--box_txn_management--atomic]
+file_filter = locale/<lang>/LC_MESSAGES/reference/reference_lua/box_txn_management/atomic.po
+source_file = locale/en/reference/reference_lua/box_txn_management/atomic.pot
+source_lang = en
+type = PO
+
+[tarantool-docs.reference--reference_lua--box_txn_management--begin]
+file_filter = locale/<lang>/LC_MESSAGES/reference/reference_lua/box_txn_management/begin.po
+source_file = locale/en/reference/reference_lua/box_txn_management/begin.pot
+source_lang = en
+type = PO
+
+[tarantool-docs.reference--reference_lua--box_txn_management--commit]
+file_filter = locale/<lang>/LC_MESSAGES/reference/reference_lua/box_txn_management/commit.po
+source_file = locale/en/reference/reference_lua/box_txn_management/commit.pot
+source_lang = en
+type = PO
+
+[tarantool-docs.reference--reference_lua--box_txn_management--is_in_txn]
+file_filter = locale/<lang>/LC_MESSAGES/reference/reference_lua/box_txn_management/is_in_txn.po
+source_file = locale/en/reference/reference_lua/box_txn_management/is_in_txn.pot
+source_lang = en
+type = PO
+
+[tarantool-docs.reference--reference_lua--box_txn_management--on_commit]
+file_filter = locale/<lang>/LC_MESSAGES/reference/reference_lua/box_txn_management/on_commit.po
+source_file = locale/en/reference/reference_lua/box_txn_management/on_commit.pot
+source_lang = en
+type = PO
+
+[tarantool-docs.reference--reference_lua--box_txn_management--on_rollback]
+file_filter = locale/<lang>/LC_MESSAGES/reference/reference_lua/box_txn_management/on_rollback.po
+source_file = locale/en/reference/reference_lua/box_txn_management/on_rollback.pot
+source_lang = en
+type = PO
+
+[tarantool-docs.reference--reference_lua--box_txn_management--rollback]
+file_filter = locale/<lang>/LC_MESSAGES/reference/reference_lua/box_txn_management/rollback.po
+source_file = locale/en/reference/reference_lua/box_txn_management/rollback.pot
+source_lang = en
+type = PO
+
+[tarantool-docs.reference--reference_lua--box_txn_management--rollback_to_savepoint]
+file_filter = locale/<lang>/LC_MESSAGES/reference/reference_lua/box_txn_management/rollback_to_savepoint.po
+source_file = locale/en/reference/reference_lua/box_txn_management/rollback_to_savepoint.pot
+source_lang = en
+type = PO
+
+[tarantool-docs.reference--reference_lua--box_txn_management--savepoint]
+file_filter = locale/<lang>/LC_MESSAGES/reference/reference_lua/box_txn_management/savepoint.po
+source_file = locale/en/reference/reference_lua/box_txn_management/savepoint.pot
+source_lang = en
+type = PO
+
+[tarantool-docs.reference--reference_rock--cartridge-cli]
+file_filter = locale/<lang>/LC_MESSAGES/reference/reference_rock/cartridge-cli.po
+source_file = locale/en/reference/reference_rock/cartridge-cli.pot
+source_lang = en
+type = PO
+
+[tarantool-docs.reference--reference_rock--dbms]
+file_filter = locale/<lang>/LC_MESSAGES/reference/reference_rock/dbms.po
+source_file = locale/en/reference/reference_rock/dbms.pot
+source_lang = en
+type = PO
+
+[tarantool-docs.reference--reference_rock--expirationd]
+file_filter = locale/<lang>/LC_MESSAGES/reference/reference_rock/expirationd.po
+source_file = locale/en/reference/reference_rock/expirationd.pot
+source_lang = en
+type = PO
+
+[tarantool-docs.reference--reference_rock--index]
+file_filter = locale/<lang>/LC_MESSAGES/reference/reference_rock/index.po
+source_file = locale/en/reference/reference_rock/index.pot
+source_lang = en
+type = PO
+
+[tarantool-docs.reference--reference_rock--membership]
+file_filter = locale/<lang>/LC_MESSAGES/reference/reference_rock/membership.po
+source_file = locale/en/reference/reference_rock/membership.pot
+source_lang = en
+type = PO
+
+[tarantool-docs.reference--reference_rock--luatest--luatest_overview]
+file_filter = locale/<lang>/LC_MESSAGES/reference/reference_rock/luatest/luatest_overview.po
+source_file = locale/en/reference/reference_rock/luatest/luatest_overview.pot
+source_lang = en
+type = PO
+
+[tarantool-docs.reference--reference_rock--vshard--index]
+file_filter = locale/<lang>/LC_MESSAGES/reference/reference_rock/vshard/index.po
+source_file = locale/en/reference/reference_rock/vshard/index.pot
+source_lang = en
+type = PO
+
+[tarantool-docs.reference--reference_rock--vshard--vshard_admin]
+file_filter = locale/<lang>/LC_MESSAGES/reference/reference_rock/vshard/vshard_admin.po
+source_file = locale/en/reference/reference_rock/vshard/vshard_admin.pot
+source_lang = en
+type = PO
+
+[tarantool-docs.reference--reference_rock--vshard--vshard_api]
+file_filter = locale/<lang>/LC_MESSAGES/reference/reference_rock/vshard/vshard_api.po
+source_file = locale/en/reference/reference_rock/vshard/vshard_api.pot
+source_lang = en
+type = PO
+
+[tarantool-docs.reference--reference_rock--vshard--vshard_architecture]
+file_filter = locale/<lang>/LC_MESSAGES/reference/reference_rock/vshard/vshard_architecture.po
+source_file = locale/en/reference/reference_rock/vshard/vshard_architecture.pot
+source_lang = en
+type = PO
+
+[tarantool-docs.reference--reference_rock--vshard--vshard_index]
+file_filter = locale/<lang>/LC_MESSAGES/reference/reference_rock/vshard/vshard_index.po
+source_file = locale/en/reference/reference_rock/vshard/vshard_index.pot
+source_lang = en
+type = PO
+
+[tarantool-docs.reference--reference_rock--vshard--vshard_quick]
+file_filter = locale/<lang>/LC_MESSAGES/reference/reference_rock/vshard/vshard_quick.po
+source_file = locale/en/reference/reference_rock/vshard/vshard_quick.pot
+source_lang = en
+type = PO
+
+[tarantool-docs.reference--reference_rock--vshard--vshard_ref]
+file_filter = locale/<lang>/LC_MESSAGES/reference/reference_rock/vshard/vshard_ref.po
+source_file = locale/en/reference/reference_rock/vshard/vshard_ref.pot
+source_lang = en
+type = PO
+
+[tarantool-docs.reference--reference_rock--vshard--vshard_summary]
+file_filter = locale/<lang>/LC_MESSAGES/reference/reference_rock/vshard/vshard_summary.po
+source_file = locale/en/reference/reference_rock/vshard/vshard_summary.pot
+source_lang = en
+type = PO
+
+[tarantool-docs.reference--reference_rock--vshard--vshard_summary_index]
+file_filter = locale/<lang>/LC_MESSAGES/reference/reference_rock/vshard/vshard_summary_index.po
+source_file = locale/en/reference/reference_rock/vshard/vshard_summary_index.pot
+source_lang = en
+type = PO
+
+[tarantool-docs.reference--reference_sql--index]
+file_filter = locale/<lang>/LC_MESSAGES/reference/reference_sql/index.po
+source_file = locale/en/reference/reference_sql/index.pot
+source_lang = en
+type = PO
+
+[tarantool-docs.reference--reference_sql--sql-features]
+file_filter = locale/<lang>/LC_MESSAGES/reference/reference_sql/sql-features.po
+source_file = locale/en/reference/reference_sql/sql-features.pot
+source_lang = en
+type = PO
+
+[tarantool-docs.reference--reference_sql--sql]
+file_filter = locale/<lang>/LC_MESSAGES/reference/reference_sql/sql.po
+source_file = locale/en/reference/reference_sql/sql.pot
+source_lang = en
+type = PO
+
+[tarantool-docs.reference--reference_sql--sql_beginners_guide]
+file_filter = locale/<lang>/LC_MESSAGES/reference/reference_sql/sql_beginners_guide.po
+source_file = locale/en/reference/reference_sql/sql_beginners_guide.pot
+source_lang = en
+type = PO
+
+[tarantool-docs.reference--reference_sql--sql_plus_lua]
+file_filter = locale/<lang>/LC_MESSAGES/reference/reference_sql/sql_plus_lua.po
+source_file = locale/en/reference/reference_sql/sql_plus_lua.pot
+source_lang = en
+type = PO
+
+[tarantool-docs.reference--reference_sql--sql_statements_and_clauses]
+file_filter = locale/<lang>/LC_MESSAGES/reference/reference_sql/sql_statements_and_clauses.po
+source_file = locale/en/reference/reference_sql/sql_statements_and_clauses.pot
+source_lang = en
+type = PO
+
+[tarantool-docs.reference--reference_sql--sql_user_guide]
+file_filter = locale/<lang>/LC_MESSAGES/reference/reference_sql/sql_user_guide.po
+source_file = locale/en/reference/reference_sql/sql_user_guide.pot
+source_lang = en
+type = PO
+
+[tarantool-docs.tutorials--c_tutorial]
+file_filter = locale/<lang>/LC_MESSAGES/tutorials/c_tutorial.po
+source_file = locale/en/tutorials/c_tutorial.pot
+source_lang = en
+type = PO
+
+[tarantool-docs.tutorials--improving_mysql]
+file_filter = locale/<lang>/LC_MESSAGES/tutorials/improving_mysql.po
+source_file = locale/en/tutorials/improving_mysql.pot
+source_lang = en
+type = PO
+
+[tarantool-docs.tutorials--index]
+file_filter = locale/<lang>/LC_MESSAGES/tutorials/index.po
+source_file = locale/en/tutorials/index.pot
+source_lang = en
+type = PO
+
+[tarantool-docs.tutorials--libslave]
+file_filter = locale/<lang>/LC_MESSAGES/tutorials/libslave.po
+source_file = locale/en/tutorials/libslave.pot
+source_lang = en
+type = PO
+
+[tarantool-docs.tutorials--lua_tutorials]
+file_filter = locale/<lang>/LC_MESSAGES/tutorials/lua_tutorials.po
+source_file = locale/en/tutorials/lua_tutorials.pot
+source_lang = en
+type = PO
+
+[tarantool-docs.tutorials--sql_tutorial]
+file_filter = locale/<lang>/LC_MESSAGES/tutorials/sql_tutorial.po
+source_file = locale/en/tutorials/sql_tutorial.pot
+source_lang = en
+type = PO
+

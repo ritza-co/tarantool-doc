@@ -78,6 +78,8 @@ Terms:
 * **translation files** are the files which match original text to translated text.
   They're located in `locale/ru`.
 
+### Localization with [Crowdin](https://crowdin.com/)
+
 Upload translation sources any time when they have changed:
 
 ```bash
@@ -97,6 +99,45 @@ Download translations files back when they're done:
 ```bash
 crowdin download
 ```
+
+### Localization with [Transifex](https://www.transifex.com/)
+
+#### Initial work
+
+Install Transifex cli tool
+```bash
+pip install transifex-client
+```
+
+Make global settings
+```bash
+tx init
+```
+Generate `.tx/config`
+```bash
+sphinx-intl update-txconfig-resources --pot-dir locale/en --transifex-project-name <transifex_project>
+```
+
+#### How to upload
+upload all files to Transifex (`*.pot` and `*.po`)
+```bash
+ tx push -l ru -t -f --no-interactive
+```
+upload one source file (pot) with translation (po)
+```bash
+tx push -l ru -t -r <transifex_project>.<file-name> -f
+```
+where <transifex_project>.<file-name> comes from .tx/config
+
+See Transifex documentation for details of the `tx`
+[push](https://docs.transifex.com/client/push) and
+[pull](https://docs.transifex.com/client/pull) commands
+
+#### Download translation
+```bash
+tx pull -r tarantool-doc.index-pot -f --mode translator
+```
+
 ## How to contribute
 
 To contribute to documentation, use the
